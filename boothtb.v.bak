@@ -1,0 +1,48 @@
+module multiply_tb;
+
+    // Parameters
+    parameter CLOCK_PERIOD = 10;
+
+    // Signals
+    reg signed [31:0] x;
+    reg signed [31:0] y;
+    wire signed [63:0] out;
+
+    // Clock Generation
+    reg clk = 0;
+    always #((CLOCK_PERIOD)/2) clk = ~clk;
+
+    // Instantiate the multiply module
+    multiply dut (
+        .x(x),
+        .y(y),
+        .out(out)
+    );
+
+    // Test stimulus
+    initial begin
+        // Initialize inputs
+        x = 10; // You can change the input values as needed
+        y = -5;
+
+        // Apply stimulus
+        #10 x = 15;
+        #10 y = 7;
+        #10 x = -8;
+        #10 y = 3;
+        // Add more test cases as needed
+
+        // Allow some time for the outputs to settle
+        #100;
+
+        // Display results
+        $display("Result: %d * %d = %d", x, y, out);
+
+        // Finish simulation
+        $finish;
+    end
+
+    // Clock generation
+    always #((CLOCK_PERIOD)/2) clk = ~clk;
+
+endmodule
