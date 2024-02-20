@@ -28,13 +28,13 @@ module Alu_tb;
 
 	initial begin
 		clock=0;
-		#15 state=4'd0;
+		#5 state=4'b1111;
 		
 	end
 	
 	always #5 clock=~clock;
 	
-	always @(negedge clock)state= state+1;
+	always @(posedge clock)state= state+1;
 	
 	always @(posedge clock)begin
 		case(state)
@@ -50,7 +50,7 @@ module Alu_tb;
 			Opcode<=Sub;
 			end
 		2	:	begin
-			Ry<=32'd16;
+			Ry<=32'd32;
 			Rb<=32'd5;
 			Opcode<=Shr;
 			end
