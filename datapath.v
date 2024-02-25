@@ -2,12 +2,12 @@ module datapath(
     // Inputs
     input PCout, ZHighout, Zlowout, HIout, Loout, InPortout, Cout,
     input MDRout, R2out, R4out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,
-	 input [4:0] operation,
+    input [4:0] operation,
     input R5in, R2in, R4in, clk,
     input [31:0] Mdatain,
     input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag,
     // Outputs
-    output [31:0] OutPort_output
+    output reg [31:0] OutPort_output
 );
     // Define internal signals and registers
     reg [15:0] enableReg;
@@ -26,8 +26,6 @@ module datapath(
         enableReg[5] = R5in;
         Rout[13] = R2out;
         Rout[14] = R4out;
-
-
     end
 
     // Define wires for register outputs
@@ -65,46 +63,12 @@ module datapath(
     // Instantiate IR register
     Register IR(clr, clk, IRin, BusMuxOut, BusMuxIn_IR);
 
-	MDRreg MDR(clr, clk, MDRin, RAM_out, BusMuxOut, Read, BusMuxIn_MDR);
+    // Instantiate MDRreg module
+    MDRreg MDR(clr, clk, 1'b1, Read, Mdatain, MDRout);
 
-	wire [4:0] encoderOut;
-
-	
-	//memoryRam stuff
-
-	encoder_32_5 regEncoder({{8{1'b0}},Cout,InPortout,MDRout,PCout,ZLowout,ZHighout,LOout,HIout,Rout}, encoderOut);
-//	$monitor ("[$monitor] time = %0t Rout=0x%0h  encoderOut=0x%0h", $time, Rout, encoderOut);					
-	mux_32_1 busMux(
-			.BusMuxIn_R0(BusMuxIn_R0),
-			.BusMuxIn_R1(BusMuxIn_R1), 
-			.BusMuxIn_R2(BusMuxIn_R2),
-			.BusMuxIn_R3(BusMuxIn_R3),
-			.BusMuxIn_R4(BusMuxIn_R4),
-			.BusMuxIn_R5(BusMuxIn_R5),
-			.BusMuxIn_R6(BusMuxIn_R6),
-			.BusMuxIn_R7(BusMuxIn_R7),
-			.BusMuxIn_R8(BusMuxIn_R8),
-			.BusMuxIn_R9(BusMuxIn_R9),
-			.BusMuxIn_R10(BusMuxIn_R10),
-			.BusMuxIn_R11(BusMuxIn_R11),
-			.BusMuxIn_R12(BusMuxIn_R12),
-			.BusMuxIn_R13(BusMuxIn_R13),
-			.BusMuxIn_R14(BusMuxIn_R14),
-			.BusMuxIn_R15(BusMuxIn_R15),
-			.BusMuxIn_HI(BusMuxIn_HI),
-			.BusMuxIn_LO(BusMuxIn_LO),
-			.BusMuxIn_Z_high(BusMuxIn_ZHI),
-			.BusMuxIn_Z_low(BusMuxIn_ZLO),
-			.BusMuxIn_PC(BusMuxIn_PC),
-			.BusMuxIn_MDR(BusMuxIn_MDR),	
-			.BusMuxIn_InPort(BusMuxIn_InPort),
-			.C_sign_extended(C_sign_extend),
-			.BusMuxOut(BusMuxOut),
-			.select(encoderOut)
-			);
-					
-	
-
-
+    // Output assignment
+    always @* begin
+        OutPort_output = BusMuxOut;
+    end
 
 endmodule
