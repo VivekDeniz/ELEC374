@@ -5,9 +5,7 @@ module datapath(
     input [4:0] operation,
     input R5in, R2in, R4in, clk,
     input [31:0] Mdatain,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag,
-    // Outputs
-    output reg [31:0] OutPort_output
+    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag
 );
     // Define internal signals and registers
     reg [15:0] enableReg;
@@ -66,7 +64,7 @@ module datapath(
     // Instantiate MDRreg module
     MDRreg MDR(clr, clk, 1'b1, Read, Mdatain, MDRout);
 	 
-	 encoder_32_5 regEncoder({{8{1'b0}},Cout,InPortout,MDRout,PCout,ZLowout,ZHighout,LOout,HIout,Rout}, encoderOut);
+	 encoder_32_5 regEncoder({{8{1'b0}},Cout,InPortout,MDRout,PCout,Zlowout,ZHighout,LOout,HIout,Rout}, encoderOut);
 	 
 	 	mux_32_1 busMux(
 			.BusMuxIn_R0(BusMuxIn_R0),
