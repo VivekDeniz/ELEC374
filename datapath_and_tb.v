@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 
-module datapath_tb;
+module datapath_and_tb;
     reg PCout, ZHighout, Zlowout, Hiout, Loout, InPortout, Cout, MDRout, R2out, R4out;
     reg MARin, PCin, MDRin, IRin, Yin, read, IncPC;
     reg [4:0] opCode;
