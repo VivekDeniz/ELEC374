@@ -4,7 +4,9 @@ module Alu(
   input wire	[4:0]  Opcode,
   output reg [63:0] C_out
   );
-  
+
+  //declare each opcode as the operation name for readability
+
   parameter 	Add =5'b00011,
           Sub =5'b00100,
           Shr =5'b00101,
@@ -21,6 +23,16 @@ module Alu(
           Div =5'b10000,
           Neg =5'b10001,
           Not =5'b10010;
+
+  //declare the output wires for each operation
+  wire	[31:0] Add_out,Sub_out,Shr_out,Shra_out,Shl_out,Ror_out,Rol_out,And_out,Or_out,Neg_out,Not_out, Div_out_r, Div_out_q;
+  wire	[63:0] Mul_out;
+  wire add_overflow;
+//case statement that connects to the correct operation depending on the opcode inputted
+  always @(*)
+    begin
+      case (Opcode)
+
   wire	[31:0] Add_out,Sub_out,Shr_out,Shra_out,Shl_out,Ror_out,Rol_out,And_out,Or_out,Neg_out,Not_out, Div_out_r, Div_out_q;
   wire	[63:0] Mul_out;
   wire add_overflow;
@@ -82,7 +94,11 @@ module Alu(
         end
       endcase
     end
+
+  //instantiating each of the arithmetic subunits
+
     
+
   Carry_lookahead_adder add(.i_add1(Ry), .i_add2(Rb),.o_result( Add_out),.c_OUT(add_overflow));
   carry_lookahead_subtractor sub(.i_add1(Ry), .i_add2(Rb),.o_result( Sub_out),.c_OUT(add_overflow));
   Shr_32 shr_32(Ry,Rb, Shr_out);
