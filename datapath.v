@@ -1,6 +1,6 @@
 module datapath(
     // Inputs
-    input PCout, ZHighout, Zlowout, HIout, Loout, InPortout, Cout,
+    input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout,
     input MDRout, R2out, R4out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,
     input [4:0] operation,
     input R5in, R2in, R4in, clk,
@@ -97,14 +97,12 @@ module datapath(
 					
 	/*instantiate alu
 	alu the_alu(
-		.RA(BusMuxIn_Y),
+		.RA(BusMuxOut),
 		.RB(BusMuxOut),
-		.RPC(BusMuxIn_PC),
 		.opcode(operation),
 		.brn_flag(branch_flag),	
 		.IncPC(IncPC),
-		.RC(C_data_out),
-		.aluPC(aluPC)
+		.RC(C_data_out)
 	);
 	*/
 
