@@ -8,7 +8,7 @@ module And_32(
 	output wire [31:0] Rz
 	);
 	
-	
-		assign Rz = Ra & Rb;
+	//Assigns the result of anding The contents of Ra and Rb into Rz
+	assign Rz = Ra & Rb;
 	
 endmodule 
