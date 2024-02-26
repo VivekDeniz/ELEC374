@@ -111,8 +111,5 @@ module datapath(
 	*/
 
     // Output assignment
-    always @* begin
-        OutPort_output = BusMuxOut;
-    end
 
 endmodule
