@@ -39,31 +39,31 @@ module mux_32_1(
 always @* begin
     // Assign output data based on select signal
     case (select)
-        5'd0 : BusMuxOut = BusMuxIn_R0;
-        5'd1 : BusMuxOut = BusMuxIn_R1;
-        5'd2 : BusMuxOut = BusMuxIn_R2;
-        5'd3 : BusMuxOut = BusMuxIn_R3;
-        5'd4 : BusMuxOut = BusMuxIn_R4;
-        5'd5 : BusMuxOut = BusMuxIn_R5;
-        5'd6 : BusMuxOut = BusMuxIn_R6;
-        5'd7 : BusMuxOut = BusMuxIn_R7;
-        5'd8 : BusMuxOut = BusMuxIn_R8;
-        5'd9 : BusMuxOut = BusMuxIn_R9;
-        5'd10: BusMuxOut = BusMuxIn_R10;
-        5'd11: BusMuxOut = BusMuxIn_R11;
-        5'd12: BusMuxOut = BusMuxIn_R12;
-        5'd13: BusMuxOut = BusMuxIn_R13;
-        5'd14: BusMuxOut = BusMuxIn_R14;
-        5'd15: BusMuxOut = BusMuxIn_R15;
-        5'd16: BusMuxOut = BusMuxIn_HI;
-        5'd17: BusMuxOut = BusMuxIn_LO;
-        5'd18: BusMuxOut = BusMuxIn_Z_high;
-        5'd19: BusMuxOut = BusMuxIn_Z_low;
-        5'd20: BusMuxOut = BusMuxIn_PC;
-        5'd21: BusMuxOut = BusMuxIn_MDR;
-        5'd22: BusMuxOut = BusMuxIn_InPort;
-        5'd23: BusMuxOut = C_sign_extended;
-        default: BusMuxOut = 32'd0;
+        5'd0: BusMuxOut <= BusMuxIn_R0[31:0];
+        5'd1: BusMuxOut <= BusMuxIn_R1[31:0];
+        5'd2: BusMuxOut <= BusMuxIn_R2[31:0];
+        5'd3: BusMuxOut <= BusMuxIn_R3[31:0];
+        5'd4: BusMuxOut <= BusMuxIn_R4[31:0];
+        5'd5: BusMuxOut <= BusMuxIn_R5[31:0];
+        5'd6: BusMuxOut <= BusMuxIn_R6[31:0];
+        5'd7: BusMuxOut <= BusMuxIn_R7[31:0];
+        5'd8: BusMuxOut <= BusMuxIn_R8[31:0];
+        5'd9: BusMuxOut <= BusMuxIn_R9[31:0];
+        5'd10: BusMuxOut <= BusMuxIn_R10[31:0];
+        5'd11: BusMuxOut <= BusMuxIn_R11[31:0];
+        5'd12: BusMuxOut <= BusMuxIn_R12[31:0];
+        5'd13: BusMuxOut <= BusMuxIn_R13[31:0];
+        5'd14: BusMuxOut <= BusMuxIn_R14[31:0];
+        5'd15: BusMuxOut <= BusMuxIn_R15[31:0];
+        5'd16: BusMuxOut <= BusMuxIn_HI[31:0];
+        5'd17: BusMuxOut <= BusMuxIn_LO[31:0];
+        5'd18: BusMuxOut <= BusMuxIn_Z_high[31:0];
+        5'd19: BusMuxOut <= BusMuxIn_Z_low[31:0];
+        5'd20: BusMuxOut <= BusMuxIn_PC[31:0];
+        5'd21: BusMuxOut <= BusMuxIn_MDR[31:0];
+        5'd22: BusMuxOut <= BusMuxIn_InPort[31:0];
+        5'd23: BusMuxOut <= C_sign_extended[31:0];
+        default: BusMuxOut <= 32'd0;
     endcase
 end
 
