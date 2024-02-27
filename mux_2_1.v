@@ -1,3 +1,4 @@
+
 module mux_2_1 (
     input [31:0] muxIn_1, 
     input [31:0] muxIn_2, 

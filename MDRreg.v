@@ -1,3 +1,4 @@
+
 module MDRreg (clr, clk, enable, Mdatain, BusMuxOut, read, MDRout);
     input clr, clk, enable, read;
     input [31:0] Mdatain, BusMuxOut;
@@ -8,3 +9,6 @@ module MDRreg (clr, clk, enable, Mdatain, BusMuxOut, read, MDRout);
     Register regMDR (clr, clk, enable, MDRin, MDRout);
 
 endmodule
+
+
+
