@@ -14,7 +14,7 @@ module datapath_shl_tb;
     reg [3:0] Present_state = Default;
 
     datapath DUT(
-        .PCout(PCout), .ZHighout(ZHighout), .Zlowout(Zlowout), .HIout(Hiout), .LOout(LOout), .InPortout(InPortout), .Cout(Cout), .MDRout(MDRout), .R2out(R2out), .R4out(R4out),
+        .PCout(PCout), .ZHighout(ZHighout), .Zlowout(Zlowout), .HIout(Hiout), .LOout(Loout), .InPortout(InPortout), .Cout(Cout), .MDRout(MDRout), .R2out(R2out), .R4out(R4out),
         .MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin),
         .IncPC(IncPC), .Read(read), .operation(opCode), .R5in(R5in), .R2in(R2in), .R4in(R4in),
         .clk(Clock), .Mdatain(Mdatain), .clr(Clear), .HIin(HIin), .LOin(LOin), .ZHIin(ZHighin), .ZLOin(ZLOin), .Cin(Cin), .branch_flag(branch_flag), .reg1out(reg1out)
