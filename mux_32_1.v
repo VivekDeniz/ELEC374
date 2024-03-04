@@ -1,4 +1,3 @@
-
 `timescale 1ns/10ps
 
 module mux_32_1(
@@ -34,7 +33,7 @@ module mux_32_1(
     output reg [31:0] BusMuxOut,
     
     // Select signal
-    input wire [4:0] select
+    input wire [5:0] select
 );
 
 always @* begin
