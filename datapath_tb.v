@@ -7,7 +7,6 @@ module datapath_tb;
     reg R5in, R2in, R4in, HIin, LOin, ZHighin, Cin, Zlowin, Clock, Clear;
     reg [31:0] Mdatain;
 	 reg branch_flag;
-    wire [31:0] reg1out;
     parameter Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, Reg_load2a = 4'b0011,
              Reg_load2b = 4'b0100, Reg_load3a = 4'b0101, Reg_load3b = 4'b0110, T0 = 4'b0111,
              T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100;
@@ -17,16 +16,16 @@ module datapath_tb;
         .PCout(PCout), .ZHighout(ZHighout), .Zlowout(Zlowout), .HIout(Hiout), .LOout(Loout), .InPortout(InPortout), .Cout(Cout), .MDRout(MDRout), .R2out(R2out), .R4out(R4out),
         .MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin),
         .IncPC(IncPC), .Read(read), .operation(opCode), .R5in(R5in), .R2in(R2in), .R4in(R4in),
-        .clk(Clock), .Mdatain(Mdatain), .clr(Clear), .HIin(HIin), .LOin(LOin), .ZHIin(ZHighin), .ZLOin(ZLOin), .Cin(Cin), .branch_flag(branch_flag), .reg1out(reg1out)
+        .clk(Clock), .Mdatain(Mdatain), .clr(Clear), .HIin(HIin), .LOin(LOin), .ZHIin(ZHighin), .ZLOin(Zlowin), .Cin(Cin), .branch_flag(branch_flag)
     );
 
     // Clock generation
     initial begin
         Clear = 0;
         Clock = 0;
-        forever #10 Clock = ~Clock; // Toggle clock every 10 time units
+         // Toggle clock every 10 time units
     end
-
+	always #10 Clock = ~Clock;
     // FSM definition
     always @(posedge Clock) begin
         case (Present_state)
@@ -51,56 +50,75 @@ module datapath_tb;
         case (Present_state)
             Default: begin
                 // Initialize signals
-                {PCout, Zlowout, ZHighout, MDRout, R2out, R4out, MARin, Zlowin, PCin, MDRin, IRin, Yin, IncPC, read, branch_flag, Hiout, Loout, InPortout, Cout, R5in, R2in, R4in, Mdatain} = 0;
+                {PCout, Zlowout, ZHighout, MDRout, R2out, R4out, MARin, Zlowin, PCin, MDRin, IRin, Yin, IncPC, read, branch_flag, Hiout, Loout, InPortout, Cout, R5in, R2in, R4in, Mdatain} <= 0;
                 opCode = 5'b01010; 
             end
             Reg_load1a: begin
                 Mdatain <= 32'h00000012;
-                read = 0; MDRin = 0;
-                #10; read = 1; MDRin = 1;
-                #15; read = 0; MDRin = 0;
+                 read <= 0; MDRin <= 1;
+                 #15 read <= 1; MDRin <= 0;
             end
             Reg_load1b: begin
-                #10; MDRout = 1; R2in = 1;
-                #15; MDRout = 0; R2in = 0;
+					 
+                MDRout <= 1; R2in <= 1;
+					 #15 MDRout <= 0; R2in <= 0;
             end
             Reg_load2a: begin
+					 
                 Mdatain <= 32'h00000014;
-                #10; read = 1; MDRin = 1;
-                #15; read = 0; MDRin = 0;
+                 read = 0; MDRin = 1;
+                #15read <= 0; MDRin <= 0;
             end
             Reg_load2b: begin
-						 #10; MDRout = 1; R4in = 1;
-                #15; MDRout = 0; R4in = 0;
+					
+					MDRout <= 1; R4in <= 1;
+					#15 MDRout <= 0; R4in <= 0;
+
             end
             Reg_load3a: begin
+					
                 Mdatain <= 32'h00000018;
-                #10; read = 1; MDRin = 1;
-                #15; read = 0; MDRin = 0;
+                read <= 0; MDRin <= 1;
+                #15 read <= 0; MDRin <= 0;
             end
             Reg_load3b: begin
-                #10; MDRout = 1; R5in = 1;
-                #15; MDRout = 0; R5in = 0;
+					
+               MDRout <= 1; R5in <= 1;
+					#15 MDRout <= 0; R5in <= 0;
             end
             T0: begin
-                PCout = 1; MARin = 1; IncPC = 1; ZHighin = 1;
+				    
+
+                PCout <= 1; MARin <= 1; IncPC <= 1; ZHighin <= 1;
+					 #15 PCout <= 0; MARin <= 0; IncPC <= 0; ZHighin <= 0;
             end
             T1: begin
-                Zlowout = 1; PCin = 1; read = 1; MDRin = 1;
+					//deassert
+					
+                Zlowout <= 1; PCin <= 1; read <= 0; MDRin <= 1;
                 Mdatain <= 32'h28918000; // opcode for "and R1, R2, R3"
+					 
+					 #15 Zlowout <= 0; PCin <= 0; read <= 1; MDRin <= 0;
             end
             T2: begin
-                MDRout = 1; IRin = 1;
+					 
+                MDRout <= 1; IRin <= 1;
+					 #15 MDRout <= 0; IRin <= 0;
             end
             T3: begin
-                R2out = 1; Yin = 1;
+					
+                R2out <= 1; Yin <= 1;
+					 #15 Yin <= 0; R2out <= 0;
             end
             T4: begin
-                Yin = 0; R2out = 0; // Assuming logical AND is performed elsewhere
-                Zlowin = 1;
+                 // Assuming logical AND is performed elsewhere
+                R4out<=1; Zlowin <= 1;
+					 #15 R4out<=0; Zlowin <= 0;
             end
             T5: begin
-                Zlowout = 1; R5in = 1;
+					
+               Zlowout <= 1; R5in <= 1;
+					#15 Zlowout <= 0; R5in <= 0;
             end
         endcase
     end
