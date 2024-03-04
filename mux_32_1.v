@@ -30,41 +30,44 @@ module mux_32_1(
     input [31:0] C_sign_extended,
     
     // Output to the bus
-    output reg [31:0] BusMuxOut,
+    output wire [31:0] BusMuxOut,
     
     // Select signal
     input wire [5:0] select
-);
+);	
+	reg [31:0] temp;
 
 always @* begin
     // Assign output data based on select signal
     case (select)
-        5'd0 : BusMuxOut = BusMuxIn_R0[31:0];
-        5'd1 : BusMuxOut = BusMuxIn_R1[31:0];
-        5'd2 : BusMuxOut = BusMuxIn_R2[31:0];
-        5'd3 : BusMuxOut = BusMuxIn_R3[31:0];
-        5'd4 : BusMuxOut = BusMuxIn_R4[31:0];
-        5'd5 : BusMuxOut = BusMuxIn_R5[31:0];
-        5'd6 : BusMuxOut = BusMuxIn_R6[31:0];
-        5'd7 : BusMuxOut = BusMuxIn_R7[31:0];
-        5'd8 : BusMuxOut = BusMuxIn_R8[31:0];
-        5'd9 : BusMuxOut = BusMuxIn_R9[31:0];
-        5'd10: BusMuxOut = BusMuxIn_R10[31:0];
-        5'd11: BusMuxOut = BusMuxIn_R11[31:0];
-        5'd12: BusMuxOut = BusMuxIn_R12[31:0];
-        5'd13: BusMuxOut = BusMuxIn_R13[31:0];
-        5'd14: BusMuxOut = BusMuxIn_R14[31:0];
-        5'd15: BusMuxOut = BusMuxIn_R15[31:0];
-        5'd16: BusMuxOut = BusMuxIn_HI[31:0];
-        5'd17: BusMuxOut = BusMuxIn_LO[31:0];
-        5'd18: BusMuxOut = BusMuxIn_Z_high[31:0];
-        5'd19: BusMuxOut = BusMuxIn_Z_low[31:0];
-        5'd20: BusMuxOut = BusMuxIn_PC[31:0];
-        5'd21: BusMuxOut = BusMuxIn_MDR[31:0];
-        5'd22: BusMuxOut = BusMuxIn_InPort[31:0];
-        5'd23: BusMuxOut = C_sign_extended[31:0];
-        default: BusMuxOut = 32'd0;
+        5'd0 : temp = BusMuxIn_R0[31:0];
+        5'd1 : temp = BusMuxIn_R1[31:0];
+        5'd2 : temp = BusMuxIn_R2[31:0];
+        5'd3 : temp = BusMuxIn_R3[31:0];
+        5'd4 : temp = BusMuxIn_R4[31:0];
+        5'd5 : temp = BusMuxIn_R5[31:0];
+        5'd6 : temp = BusMuxIn_R6[31:0];
+        5'd7 : temp = BusMuxIn_R7[31:0];
+        5'd8 : temp = BusMuxIn_R8[31:0];
+        5'd9 : temp = BusMuxIn_R9[31:0];
+        5'd10: temp = BusMuxIn_R10[31:0];
+        5'd11: temp = BusMuxIn_R11[31:0];
+        5'd12: temp = BusMuxIn_R12[31:0];
+        5'd13: temp = BusMuxIn_R13[31:0];
+        5'd14: temp = BusMuxIn_R14[31:0];
+        5'd15: temp = BusMuxIn_R15[31:0];
+        5'd16: temp = BusMuxIn_HI[31:0];
+        5'd17: temp = BusMuxIn_LO[31:0];
+        5'd18: temp = BusMuxIn_Z_high[31:0];
+        5'd19: temp = BusMuxIn_Z_low[31:0];
+        5'd20: temp = BusMuxIn_PC[31:0];
+        5'd21: temp = BusMuxIn_MDR[31:0];
+        5'd22: temp = BusMuxIn_InPort[31:0];
+        5'd23: temp = C_sign_extended[31:0];
+        default: temp = 32'd0;
     endcase
-end
-
+	 
+	 
+	end
+	assign BusMuxOut = temp;
 endmodule
