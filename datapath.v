@@ -4,29 +4,22 @@ module datapath(
     input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout,
     input MDRout, R2out, R4out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,
     input [4:0] operation,
-    input R5in, R2in, R4in, clk,
+    input clk,
     input [31:0] Mdatain,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag
+    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag,
+	 input wire [15:0] enableReg,Rout 
 	 
 );
     // Define internal signals and registers
-    reg [15:0] enableReg;
-    reg [15:0] Rout;
+    
 	 
-
+		
+	
+	
     // Initialize enableReg and Rout
-    initial begin
-        Rout = 16'b0;
-        enableReg = 16'b0;
-    end
+    
 
-	always @(*) begin
-		enableReg[2]= R2in;
-		enableReg[4]= R4in;
-		enableReg[5]= R5in;
-		Rout[2]= R2out;
-		Rout[4]= R4out;
-	end
+	
 
     // Define wires for register outputs
     wire [31:0] BusMuxIn_IR, BusMuxIn_Y, C_sign_extend, BusMuxIn_InPort, BusMuxIn_MDR, BusMuxIn_PC, BusMuxIn_ZLO, BusMuxIn_ZHI, BusMuxIn_LO, BusMuxIn_HI;
