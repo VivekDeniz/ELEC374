@@ -5,7 +5,7 @@ module carry_lookahead_subtractor
    input [WIDTH-1:0] i_add1,
    input [WIDTH-1:0] i_add2,
    output [WIDTH:0]  o_result,
-	output c_OUT
+   output c_OUT
    );
   //carry wire   
   wire [WIDTH:0]     w_C;
