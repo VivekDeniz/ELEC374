@@ -1,6 +1,4 @@
-module carry_lookahead_subtractor
-    //adjustable datawidth, set to 32
-    #(parameter WIDTH = 32)(
+module carry_lookahead_subtractor #(parameter WIDTH = 32)(
     input [WIDTH-1:0] i_add1,
     input [WIDTH-1:0] i_add2,
     output [WIDTH-1:0] o_result,
@@ -12,10 +10,10 @@ module carry_lookahead_subtractor
   
   wire [WIDTH:0] twos_complement_output;
 
-  //Invert and add 1 to compute two's complement
+  // Invert and add 1 to compute two's complement
   assign twos_complement_output = ~i_add2 + 1;
-  //Subtractor uses same logic as carry_lookahead_adder, but negates the first operand in the expression
-  //creates the amount of full adders based on parameter size
+  
+  // Create the Full Adders
   genvar ii;
   generate
     for (ii = 0; ii < WIDTH; ii = ii + 1) begin: gen_loop1
@@ -29,9 +27,9 @@ module carry_lookahead_subtractor
     end
   endgenerate
  
-  //Generate (G) Terms:  Gi=Ai*Bi
-  //Propagate (P) Terms: Pi=Ai+Bi
-  //use carry-lookahead-logic to calculate terms in advance
+  // Create the Generate (G) Terms: Gi=Ai&Bi
+  // Create the Propagate Terms: Pi=Ai|Bi
+  // Create the Carry Terms:
   genvar jj;
   generate
     for (jj = 0; jj < WIDTH; jj = jj + 1) begin: gen_loop2
@@ -41,13 +39,13 @@ module carry_lookahead_subtractor
     end
   endgenerate
    
-  assign w_C[0] = 1'b0; //no carry input on first adder
+  assign w_C[0] = 1'b0; // no carry input on first adder
  
   assign o_result = w_SUM;   // Removed concatenation since w_SUM is already [WIDTH-1:0]
  
   assign c_OUT = w_C[WIDTH];
  
-endmodule //carry_lookahead_subtractor
+endmodule // carry_lookahead_subtractor
 
 module full_adder_sub(
    input i_bit1,

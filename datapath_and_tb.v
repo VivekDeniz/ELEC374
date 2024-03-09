@@ -35,7 +35,7 @@ module datapath_and_tb();
          // Toggle clock every 10 time units
     end
 	always #10 Clock = ~Clock;
-    // FSM definition
+    
     always @(negedge Clock) begin
 
 		Present_state=Present_state+1;
@@ -47,7 +47,7 @@ module datapath_and_tb();
             Default: begin
                 // Initialize signals
                 {PCout, Zlowout, ZHighout, MDRout,  MARin, Zlowin, PCin, MDRin, IRin, Yin, IncPC, read, branch_flag, Hiout, Loout, InPortout, Cout, Mdatain} <= 0;
-                opCode = 5'b01010; 
+                opCode = 5'b00000; 
 					 
             end
             Reg_load1a: begin
@@ -85,7 +85,6 @@ module datapath_and_tb();
             end
             T0: begin
 				    
-
                 PCout <= 1; MARin <= 1; IncPC <= 1; ZHighin <= 1;
 					 #15 PCout <= 0; MARin <= 0; IncPC <= 0; ZHighin <= 0;
             end
@@ -109,8 +108,9 @@ module datapath_and_tb();
             end
             T4: begin
                  // Assuming logical AND is performed elsewhere
-                Rout[3]<=1; Zlowin <= 1;
-					 #15 Rout[3]<=0; Zlowin <= 0;
+                Rout[3]<=1; Zlowin <= 1;opCode = 5'b01010; 
+
+					 #15 Rout[3]<=0; Zlowin <= 0;opCode = 5'b00000;
             end
             T5: begin
 					

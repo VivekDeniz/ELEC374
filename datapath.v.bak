@@ -2,12 +2,12 @@
 module datapath(
     // Inputs
     input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout,
-    input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, Gra,Grb,Grc, Rin,Rout,BAout,
+    input MDRout, R2out, R4out, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,
     input [4:0] operation,
     input clk,
     input [31:0] Mdatain,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag
-	 
+    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag,
+	 input wire [15:0] enableReg,Rout 
 	 
 );
     // Define internal signals and registers
@@ -24,10 +24,9 @@ module datapath(
     // Define wires for register outputs
     wire [31:0] BusMuxIn_IR, BusMuxIn_Y, C_sign_extend, BusMuxIn_InPort, BusMuxIn_MDR, BusMuxIn_PC, BusMuxIn_ZLO, BusMuxIn_ZHI, BusMuxIn_LO, BusMuxIn_HI;
     wire [31:0] BusMuxIn_R15, BusMuxIn_R14, BusMuxIn_R13, BusMuxIn_R12, BusMuxIn_R11, BusMuxIn_R10, BusMuxIn_R9, BusMuxIn_R8, BusMuxIn_R7, BusMuxIn_R6, BusMuxIn_R5, BusMuxIn_R4, BusMuxIn_R3, BusMuxIn_R2, BusMuxIn_R1, BusMuxIn_R0;
-    //wire [31:0] bus_signal;
+    wire [31:0] bus_signal;
 	 wire [63:0] C_data_out;
-    wire [31:0] BusMuxOut,IRout_data;
-	 wire [15:0] enableReg,enableRout;
+    wire [31:0] BusMuxOut;
 
 	 
     // Instantiate registers from 0 to 15
@@ -57,7 +56,7 @@ module datapath(
     Register LO(clr, clk, LOin, BusMuxOut, BusMuxIn_LO);
 
     // Instantiate IR register
-    Register IR(clr, clk, IRin,BusMuxOut , IRout_data);
+    Register IR(clr, clk, IRin, BusMuxOut, BusMuxIn_IR);
 
     // Instantiate MDRreg module
     MDRreg MDR(clr, clk, MDRin, Mdatain, BusMuxOut, Read, BusMuxIn_MDR);
@@ -66,7 +65,7 @@ module datapath(
 	 
 	 wire[5:0] encoderOut;
 	 
-	 encoder_32_5 regEncoder({8'b0000_0000,Cout,InPortout,MDRout,PCout,Zlowout,ZHighout,LOout,HIout,enableRout}, encoderOut);
+	 encoder_32_5 regEncoder({8'b0000_0000,Cout,InPortout,MDRout,PCout,Zlowout,ZHighout,LOout,HIout,Rout}, encoderOut);
 	 
 	 	mux_32_1 busMux(
 			.BusMuxIn_R0(BusMuxIn_R0),
@@ -104,11 +103,7 @@ module datapath(
 		.Opcode(operation),
 		.C_out(C_data_out)
 	);
-	select_encode select(.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
-								.IR(IRout_data),
-								.Rin_to_reg(enableReg),.Rout_to_reg(enableRout),
-								.C_sign_extended(C_sign_extend)
-								);
+	
 
     // Output assignment
 

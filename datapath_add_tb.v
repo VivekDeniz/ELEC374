@@ -8,12 +8,11 @@ module datapath_add_tb();
     reg [31:0] Mdatain;
 	 reg branch_flag;
 	 reg [15:0] enableReg, Rout;
-    //encoding states
     parameter Default = 4'b0001, Reg_load1a = 4'b0010, Reg_load1b = 4'b0011, Reg_load2a = 4'b0100,
              Reg_load2b = 4'b0101, Reg_load3a = 4'b0110, Reg_load3b = 4'b0111, T0 = 4'b1000,
              T1 = 4'b1001, T2 = 4'b1010, T3 = 4'b1011, T4 = 4'b1100, T5 = 4'b1101;
     reg [3:0] Present_state = Default;
-    //create an instance of the datapath	
+
     datapath DUT(
         .PCout(PCout), .ZHighout(ZHighout), .Zlowout(Zlowout), .HIout(Hiout), .LOout(Loout), .InPortout(InPortout), .Cout(Cout), .MDRout(MDRout), 
         .MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin),
@@ -51,33 +50,28 @@ module datapath_add_tb();
                 opCode = 5'b00000; 
 					 
             end
-	    //load value into R2
             Reg_load1a: begin
-		    
-                Mdatain <= -32'd00000012;
+                Mdatain <= -32'd12;
                  read <= 0; MDRin <= 1;
                  #15 read <= 1; MDRin <= 0;
             end
             Reg_load1b: begin
 					 
                 MDRout <= 1; enableReg[2]<= 1;
-	        #15 MDRout <= 0; enableReg[2] <= 0;
+					 #15 MDRout <= 0; enableReg[2] <= 0;
             end
-	    //load value into R3
             Reg_load2a: begin
 					 
                 Mdatain <= 32'h00000014;
-                read = 0; MDRin = 1;
+                 read = 0; MDRin = 1;
                 #15read <= 0; MDRin <= 0;
             end
-
             Reg_load2b: begin
 					
-		MDRout <= 1; enableReg[3] <= 1;
-		#15 MDRout <= 0; enableReg[3] <= 0;
+					MDRout <= 1; enableReg[3] <= 1;
+					#15 MDRout <= 0; enableReg[3] <= 0;
 
             end
-            //load value into R2
             Reg_load3a: begin
 					
                 Mdatain <= 32'h00000018;
@@ -86,46 +80,42 @@ module datapath_add_tb();
             end
             Reg_load3b: begin
 					
-                MDRout <= 1; enableReg[1] <= 1;
-		#15 MDRout <= 0; enableReg[1] <= 0;
+               MDRout <= 1; enableReg[1] <= 1;
+					#15 MDRout <= 0; enableReg[1] <= 0;
             end
-	    //enable 
-            T0: begin		    
+            T0: begin
+				    
 
                 PCout <= 1; MARin <= 1; IncPC <= 1; ZHighin <= 1;
-		#15 PCout <= 0; MARin <= 0; IncPC <= 0; ZHighin <= 0;
-		    
+					 #15 PCout <= 0; MARin <= 0; IncPC <= 0; ZHighin <= 0;
             end
             T1: begin
+					//deassert
 					
                 Zlowout <= 1; PCin <= 1; read <= 0; MDRin <= 1;
                 Mdatain <= 32'h28918000; 
-		#15 Zlowout <= 0; PCin <= 0; read <= 1; MDRin <= 0;
-		    
+					 
+					 #15 Zlowout <= 0; PCin <= 0; read <= 1; MDRin <= 0;
             end
             T2: begin
 					 
                 MDRout <= 1; IRin <= 1;
-		#15 MDRout <= 0; IRin <= 0;
-		    
+					 #15 MDRout <= 0; IRin <= 0;
             end
             T3: begin
 					
                 Rout[2] <= 1; Yin <= 1;
-		#15 Yin <= 0; Rout[2] <= 0;
-		    
+					 #15 Yin <= 0; Rout[2] <= 0;
             end
             T4: begin
                  // Assuming logical AND is performed elsewhere
                 Rout[3]<=1; Zlowin <= 1; opCode <= 5'b00011;
-		#15 Rout[3]<=0; Zlowin <= 0; opCode <= 5'b00000;
-		    
+					 #15 Rout[3]<=0; Zlowin <= 0; opCode <= 5'b00000;
             end
             T5: begin
-		    
+					
                Zlowout <= 1; enableReg[1] <= 1;
-		#15 Zlowout <= 0; enableReg[1] <= 0;
-		    
+					#15 Zlowout <= 0; enableReg[1] <= 0;
             end
         endcase
     end
