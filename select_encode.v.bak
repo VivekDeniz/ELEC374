@@ -1,0 +1,18 @@
+module Select_encode(
+	input Gra,Grb,Grc,Rin,Rout,
+	input [31:0] IR,
+	output wire [15:0]Rin_to_reg,Rout_to_reg,
+	output wire [31:0] C_sign_extended
+);
+	wire [3:0] decoder_in;
+	
+	if(Gra) assign decoder_in =IR[26:23];
+	else if(Grb) assign decoder_in =IR[22:19];
+	else if(Grc) assign decoder_in =IR[18:15];
+	
+	always@(decoder_in)begin
+		case(decoder_in)
+		
+	end
+	
+endmodule	
