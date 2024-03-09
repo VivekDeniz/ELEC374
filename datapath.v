@@ -57,7 +57,7 @@ module datapath(
     Register LO(clr, clk, LOin, BusMuxOut, BusMuxIn_LO);
 
     // Instantiate IR register
-    Register IR(clr, clk, IRin, IRout_data, BusMuxIn_IR);
+    Register IR(clr, clk, IRin,BusMuxOut , IRout_data);
 
     // Instantiate MDRreg module
     MDRreg MDR(clr, clk, MDRin, Mdatain, BusMuxOut, Read, BusMuxIn_MDR);
@@ -106,7 +106,7 @@ module datapath(
 	);
 	select_encode select(.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
 								.IR(IRout_data),
-								.Rin_to_reg(enableReg),.Rout_to_reg(Rout),
+								.Rin_to_reg(enableReg),.Rout_to_reg(enableRout),
 								.C_sign_extended(C_sign_extend)
 								);
 

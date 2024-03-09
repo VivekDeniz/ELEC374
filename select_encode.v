@@ -4,8 +4,8 @@ module select_encode(
 	output wire [15:0]Rin_to_reg,Rout_to_reg,
 	output wire [31:0] C_sign_extended
 );
-	reg [3:0] decoder_in;
-	reg [15:0] reg_select,temp_in,temp_out;
+	reg [3:0] decoder_in=0000;
+	reg [15:0] reg_select=0000_0000_0000_0000,temp_in,temp_out;
 	reg [31:0] extend_temp;
 	
 	always@(*)begin
@@ -30,13 +30,16 @@ module select_encode(
 			4'd1  : reg_select=16'b0000_0000_0000_0010;
 			4'd0  : reg_select=16'b0000_0000_0000_0001;
 		endcase
+		
+		
 		if(Rout||BAout)  temp_out= reg_select;
 		else  temp_out=16'b0;
+		
 		if(Rin)  temp_in=reg_select;
 		else  temp_in=16'b0;
 		
-		extend_temp={{14{ IR [18]}},IR[17:0]};
-		
+		if(IR[18]==1)extend_temp={14'b1111_1111_1111_11,IR[17:0]};
+		else extend_temp={14'b0,IR[17:0]};
 		
 	end
 	
