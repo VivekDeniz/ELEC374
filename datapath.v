@@ -1,4 +1,3 @@
-
 module datapath(
     // Inputs
     input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout, CONin,
@@ -6,7 +5,10 @@ module datapath(
     input [4:0] operation,
     input clk,
     input [31:0] Mdatain,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag
+    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag,
+	 input outportout,
+	 input [31:0] inport_data,
+	 output[31:0]outport_data
 	 
 	 
 );
@@ -105,12 +107,24 @@ module datapath(
 		.Opcode(operation),
 		.C_out(C_data_out)
 	);
-	select_encode select(.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
-								.IR(IRout_data),
-								.Rin_to_reg(enableReg),.Rout_to_reg(enableRout),
-								.C_sign_extended(C_sign_extend)
-								);
+	select_encode select(
+		.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
+		.IR(IRout_data),
+		.Rin_to_reg(enableReg),.Rout_to_reg(enableRout),
+		.C_sign_extended(C_sign_extend)
+		);
 
     // Output assignment
+	 outport(
+		.clr(clr),.clk(clk),.outportin(outportin), 
+		.BusMuxOut(BusMuxOut),
+		.outport_data(outport_data)
+		);
+	 
+	 inport inport( 
+		.clr(clr),.clk(clk),
+		.inport_data(inport_data),
+		.BusMuxIn(BusMuxIn_InPort)
+		);
 
 endmodule
