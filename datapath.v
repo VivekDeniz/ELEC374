@@ -1,11 +1,11 @@
 module datapath(
     // Inputs
     input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout, CONin,
-    input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, Gra,Grb,Grc, Rin,Rout,BAout,
+    input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,
     input [4:0] operation,
     input clk,
-    input [31:0] Mdatain,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin, branch_flag,
+    
+    input clr, HIin, LOin, ZHIin, ZLOin, Cin,
 	 input outportout,
 	 input [31:0] inport_data,
 	 output[31:0]outport_data
@@ -30,10 +30,14 @@ module datapath(
 	 wire [63:0] C_data_out, BusMuxIn_MAR;
     wire [31:0] BusMuxOut,IRout_data;
 	 wire [15:0] enableReg,enableRout;
-
+	 wire [31:0] Mdatain;
+	 wire [31:0] r0_out;
+	 
+	 Register r0(clr,clk,enableReg[0], BusMuxOut, r0_out);
+	 assign BusMuxIn_R0 = {32{!BAout}} & r0_out; 
 	 
     // Instantiate registers from 0 to 15
-    Register r0(clr, clk, enableReg[0], BusMuxOut, BusMuxIn_R0);
+  
     Register r1(clr, clk, enableReg[1], BusMuxOut, BusMuxIn_R1);
     Register r2(clr, clk, enableReg[2], BusMuxOut, BusMuxIn_R2);
     Register r3(clr, clk, enableReg[3], BusMuxOut, BusMuxIn_R3);
@@ -64,7 +68,7 @@ module datapath(
     // Instantiate MDRreg module
     MDRreg MDR(clr, clk, MDRin, Mdatain, BusMuxOut, Read, BusMuxIn_MDR);
 	 
-	 marUnit MAR(clr, clk, MARin, BusMuxOut, BusMuxIn_MAR);
+	 mar marUnit(clr, clk, MARin, BusMuxOut, MAR_to_ram);
 	 
 	 CONFF conff(branch_flag, CONin, clr, BusMuxIn_IR, BusMuxOut);
 	 wire[5:0] encoderOut;
@@ -105,7 +109,8 @@ module datapath(
 		.Rb(BusMuxOut),
 		.Ry(BusMuxIn_Y),
 		.Opcode(operation),
-		.C_out(C_data_out)
+		.C_out(C_data_out),
+		.branch_flag(branch_flag)
 	);
 	select_encode select(
 		.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
@@ -115,7 +120,7 @@ module datapath(
 		);
 
     // Output assignment
-	 outport(
+	 outport outport(
 		.clr(clr),.clk(clk),.outportin(outportin), 
 		.BusMuxOut(BusMuxOut),
 		.outport_data(outport_data)
@@ -125,6 +130,14 @@ module datapath(
 		.clr(clr),.clk(clk),
 		.inport_data(inport_data),
 		.BusMuxIn(BusMuxIn_InPort)
+		);
+	ram ram(
+		.address(Mar_to_ram),
+		.clock(clk),
+		.data(BusMuxOut),
+		.rden(Read),
+		.wren(Write),
+		.q(Mdatain)
 		);
 
 endmodule
