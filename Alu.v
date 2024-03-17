@@ -2,6 +2,7 @@ module Alu(
 	input wire 	[31:0] Rb,
 	input wire	[31:0] Ry,
 	input wire	[4:0]  Opcode,
+	input wire branch_flag,
 	output reg [63:0] C_out
 	);
 	
@@ -20,7 +21,14 @@ module Alu(
 					Mul =5'b01111,
 					Div =5'b10000,
 					Neg =5'b10001,
-					Not =5'b10010;
+					Not =5'b10010,
+					ld	 =5'b00000,
+					ldi =5'b00001,
+					st  =5'b00010,
+					br  =5'b10011,
+					jr  =5'b10100,
+					jal =5'b10101;
+					
 	wire	[31:0] Add_out,Sub_out,Shr_out,Shra_out,Shl_out,Ror_out,Rol_out,And_out,Or_out,Neg_out,Not_out, Div_out_r, Div_out_q;
 	wire	[63:0] Mul_out;
 	wire add_overflow;
@@ -28,7 +36,7 @@ module Alu(
 		begin
 			case (Opcode)
 				
-				Add : begin
+				Add,ld,ldi,st,jr,jal : begin
 					C_out[31:0] <= Add_out;
 					C_out[63:32]<= 32'b0;
 				end
@@ -79,6 +87,16 @@ module Alu(
 				Mul : begin
 					C_out <= Mul_out;
 				end
+				br :begin
+					if(branch_flag)begin
+						C_out[31:0] <= Add_out;
+						C_out[63:32]<= 32'b0;
+					end
+					else begin
+						C_out[31:0] <= Ry;
+						C_out[63:32]<= 32'b0;
+					end
+				end 
 				default : begin
 					C_out<= 64'd 18446744073709551615;
 				end
