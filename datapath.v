@@ -4,11 +4,9 @@ module datapath(
     input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,
     input [4:0] operation,
     input clk,
-    
     input clr, HIin, LOin, ZHIin, ZLOin, Cin,
-	 input outportout,
 	 input [31:0] inport_data,
-	 output[31:0]outport_data
+	 output[31:0] outport_data
 	 
 	 
 );
@@ -33,6 +31,7 @@ module datapath(
 	 wire [31:0] Mdatain;
 	 wire [31:0] r0_out;
 	 wire branch_flag;
+	 wire [8:0] Mar_to_ram;
 	 Register r0(clr,clk,enableReg[0], BusMuxOut, r0_out);
 	 assign BusMuxIn_R0 = {32{!BAout}} & r0_out; 
 	 
@@ -70,7 +69,7 @@ module datapath(
 	 
 	 mar marUnit(clr, clk, MARin, BusMuxOut, Mar_to_ram);
 	 
-	 CONFF conff(branch_flag, CONin, clr, BusMuxIn_IR, BusMuxOut);
+	 CONFF conff(branch_flag, CONin, clr, BusMuxIn_IR[20:19], BusMuxOut);
 	 wire[5:0] encoderOut;
 	 
 	 encoder_32_5 regEncoder({8'b0000_0000,Cout,InPortout,MDRout,PCout,Zlowout,ZHighout,LOout,HIout,enableRout}, encoderOut);

@@ -1,0 +1,1481 @@
+Analysis & Elaboration report for Phase1
+Sun Mar 17 19:31:05 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_ago1:auto_generated
+  6. Parameter Settings for User Entity Instance: Register:r0
+  7. Parameter Settings for User Entity Instance: Register:r1
+  8. Parameter Settings for User Entity Instance: Register:r2
+  9. Parameter Settings for User Entity Instance: Register:r3
+ 10. Parameter Settings for User Entity Instance: Register:r4
+ 11. Parameter Settings for User Entity Instance: Register:r5
+ 12. Parameter Settings for User Entity Instance: Register:r6
+ 13. Parameter Settings for User Entity Instance: Register:r7
+ 14. Parameter Settings for User Entity Instance: Register:r8
+ 15. Parameter Settings for User Entity Instance: Register:r9
+ 16. Parameter Settings for User Entity Instance: Register:r10
+ 17. Parameter Settings for User Entity Instance: Register:r11
+ 18. Parameter Settings for User Entity Instance: Register:r12
+ 19. Parameter Settings for User Entity Instance: Register:r13
+ 20. Parameter Settings for User Entity Instance: Register:r14
+ 21. Parameter Settings for User Entity Instance: Register:r15
+ 22. Parameter Settings for User Entity Instance: Register:PC
+ 23. Parameter Settings for User Entity Instance: Register:Y
+ 24. Parameter Settings for User Entity Instance: Register:Z_HI
+ 25. Parameter Settings for User Entity Instance: Register:Z_LO
+ 26. Parameter Settings for User Entity Instance: Register:HI
+ 27. Parameter Settings for User Entity Instance: Register:LO
+ 28. Parameter Settings for User Entity Instance: Register:IR
+ 29. Parameter Settings for User Entity Instance: MDRreg:MDR|Register:regMDR
+ 30. Parameter Settings for User Entity Instance: mar:marUnit|Register:MAR
+ 31. Parameter Settings for User Entity Instance: Alu:the_alu
+ 32. Parameter Settings for User Entity Instance: Alu:the_alu|Carry_lookahead_adder:add
+ 33. Parameter Settings for User Entity Instance: Alu:the_alu|carry_lookahead_subtractor:sub
+ 34. Parameter Settings for User Entity Instance: outport:outport|Register:outportreg
+ 35. Parameter Settings for User Entity Instance: inport:inport|Register:inportreg
+ 36. Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component
+ 37. altsyncram Parameter Settings by Entity Instance
+ 38. Analysis & Elaboration Settings
+ 39. Port Connectivity Checks: "inport:inport|Register:inportreg"
+ 40. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[31].full_adder_sub_inst"
+ 41. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[30].full_adder_sub_inst"
+ 42. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[29].full_adder_sub_inst"
+ 43. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[28].full_adder_sub_inst"
+ 44. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[27].full_adder_sub_inst"
+ 45. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[26].full_adder_sub_inst"
+ 46. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[25].full_adder_sub_inst"
+ 47. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[24].full_adder_sub_inst"
+ 48. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[23].full_adder_sub_inst"
+ 49. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[22].full_adder_sub_inst"
+ 50. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[21].full_adder_sub_inst"
+ 51. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[20].full_adder_sub_inst"
+ 52. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[19].full_adder_sub_inst"
+ 53. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[18].full_adder_sub_inst"
+ 54. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[17].full_adder_sub_inst"
+ 55. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[16].full_adder_sub_inst"
+ 56. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[15].full_adder_sub_inst"
+ 57. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[14].full_adder_sub_inst"
+ 58. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[13].full_adder_sub_inst"
+ 59. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[12].full_adder_sub_inst"
+ 60. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[11].full_adder_sub_inst"
+ 61. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[10].full_adder_sub_inst"
+ 62. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[9].full_adder_sub_inst"
+ 63. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[8].full_adder_sub_inst"
+ 64. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[7].full_adder_sub_inst"
+ 65. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[6].full_adder_sub_inst"
+ 66. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[5].full_adder_sub_inst"
+ 67. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[4].full_adder_sub_inst"
+ 68. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[3].full_adder_sub_inst"
+ 69. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[2].full_adder_sub_inst"
+ 70. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[1].full_adder_sub_inst"
+ 71. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst"
+ 72. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[31].full_adder_inst"
+ 73. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[30].full_adder_inst"
+ 74. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[29].full_adder_inst"
+ 75. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[28].full_adder_inst"
+ 76. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[27].full_adder_inst"
+ 77. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[26].full_adder_inst"
+ 78. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[25].full_adder_inst"
+ 79. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[24].full_adder_inst"
+ 80. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[23].full_adder_inst"
+ 81. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[22].full_adder_inst"
+ 82. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[21].full_adder_inst"
+ 83. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[20].full_adder_inst"
+ 84. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[19].full_adder_inst"
+ 85. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[18].full_adder_inst"
+ 86. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[17].full_adder_inst"
+ 87. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[16].full_adder_inst"
+ 88. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[15].full_adder_inst"
+ 89. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[14].full_adder_inst"
+ 90. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[13].full_adder_inst"
+ 91. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[12].full_adder_inst"
+ 92. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[11].full_adder_inst"
+ 93. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[10].full_adder_inst"
+ 94. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[9].full_adder_inst"
+ 95. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[8].full_adder_inst"
+ 96. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[7].full_adder_inst"
+ 97. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[6].full_adder_inst"
+ 98. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[5].full_adder_inst"
+ 99. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[4].full_adder_inst"
+100. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[3].full_adder_inst"
+101. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[2].full_adder_inst"
+102. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[1].full_adder_inst"
+103. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst"
+104. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add"
+105. Port Connectivity Checks: "encoder_32_5:regEncoder"
+106. Port Connectivity Checks: "mar:marUnit|Register:MAR"
+107. Analysis & Elaboration Messages
+108. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sun Mar 17 19:31:05 2024       ;
+; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                 ; Phase1                                      ;
+; Top-level Entity Name         ; datapath                                    ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                             ;
++--------+--------------+---------+--------------+--------------+-------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance   ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |datapath|ram:ram ; ram.v           ;
++--------+--------------+---------+--------------+--------------+-------------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_ago1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------+
+; Assignment                      ; Value              ; From ; To                              ;
++---------------------------------+--------------------+------+---------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
++---------------------------------+--------------------+------+---------------------------------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r0 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r1 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r2 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r3 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r4 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r5 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r6 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r7 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r8 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r9 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r10 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VAL            ; 0     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r11 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VAL            ; 0     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r12 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VAL            ; 0     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r13 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VAL            ; 0     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r14 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VAL            ; 0     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:r15 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; VAL            ; 0     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:PC ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:Y ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; VAL            ; 0     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:Z_HI ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; VAL            ; 0     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:Z_LO ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; VAL            ; 0     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:HI ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:LO ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register:IR ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; VAL            ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MDRreg:MDR|Register:regMDR ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; VAL            ; 0     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mar:marUnit|Register:MAR ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; VAL            ; 0     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Alu:the_alu ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; Add            ; 00011 ; Unsigned Binary                 ;
+; Sub            ; 00100 ; Unsigned Binary                 ;
+; Shr            ; 00101 ; Unsigned Binary                 ;
+; Shra           ; 00110 ; Unsigned Binary                 ;
+; Shl            ; 00111 ; Unsigned Binary                 ;
+; Ror            ; 01000 ; Unsigned Binary                 ;
+; Rol            ; 01001 ; Unsigned Binary                 ;
+; And            ; 01010 ; Unsigned Binary                 ;
+; Or             ; 01100 ; Unsigned Binary                 ;
+; Addi           ; 01100 ; Unsigned Binary                 ;
+; Andi           ; 01101 ; Unsigned Binary                 ;
+; Ori            ; 01110 ; Unsigned Binary                 ;
+; Mul            ; 01111 ; Unsigned Binary                 ;
+; Div            ; 10000 ; Unsigned Binary                 ;
+; Neg            ; 10001 ; Unsigned Binary                 ;
+; Not            ; 10010 ; Unsigned Binary                 ;
+; ld             ; 00000 ; Unsigned Binary                 ;
+; ldi            ; 00001 ; Unsigned Binary                 ;
+; st             ; 00010 ; Unsigned Binary                 ;
+; br             ; 10011 ; Unsigned Binary                 ;
+; jr             ; 10100 ; Unsigned Binary                 ;
+; jal            ; 10101 ; Unsigned Binary                 ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Alu:the_alu|Carry_lookahead_adder:add ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Alu:the_alu|carry_lookahead_subtractor:sub ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: outport:outport|Register:outportreg ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; VAL            ; 0     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: inport:inport|Register:inportreg ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; VAL            ; 0     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------+
+; Parameter Name                     ; Value                ; Type                     ;
++------------------------------------+----------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                  ;
+; WIDTH_A                            ; 32                   ; Signed Integer           ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer           ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer           ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WIDTH_B                            ; 1                    ; Untyped                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; INIT_FILE                          ; ld_test.hex          ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_ago1      ; Untyped                  ;
++------------------------------------+----------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                    ;
++-------------------------------------------+-----------------------------------------+
+; Name                                      ; Value                                   ;
++-------------------------------------------+-----------------------------------------+
+; Number of entity instances                ; 1                                       ;
+; Entity Instance                           ; ram:ram|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                             ;
+;     -- WIDTH_A                            ; 32                                      ;
+;     -- NUMWORDS_A                         ; 512                                     ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                  ;
+;     -- WIDTH_B                            ; 1                                       ;
+;     -- NUMWORDS_B                         ; 1                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
++-------------------------------------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; datapath           ; Phase1             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "inport:inport|Register:inportreg" ;
++--------+-------+----------+----------------------------------+
+; Port   ; Type  ; Severity ; Details                          ;
++--------+-------+----------+----------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                     ;
++--------+-------+----------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[31].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[30].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[29].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[28].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[27].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[26].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[25].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[24].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[23].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[22].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[21].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[20].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[19].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[18].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[17].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[16].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[15].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[14].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[13].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[12].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[11].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[10].full_adder_sub_inst" ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[9].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[8].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[7].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[6].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[5].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[4].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[3].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[2].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[1].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; i_carry ; Input  ; Info     ; Stuck at GND                                                                             ;
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[31].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[30].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[29].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[28].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[27].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[26].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[25].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[24].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[23].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[22].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[21].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[20].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[19].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[18].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[17].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[16].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[15].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[14].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[13].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[12].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[11].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[10].full_adder_inst" ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                     ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                      ;
++---------+--------+----------+-----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[9].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[8].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[7].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[6].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[5].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[4].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[3].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[2].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[1].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst" ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                    ;
++---------+--------+----------+----------------------------------------------------------------------------+
+; i_carry ; Input  ; Info     ; Stuck at GND                                                               ;
+; o_carry ; Output ; Info     ; Explicitly unconnected                                                     ;
++---------+--------+----------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add"                                                                                              ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                         ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+; o_result ; Output ; Warning  ; Output or bidir port (33 bits) is wider than the port expression (32 bits) it drives; bit(s) "o_result[32..32]" have no fanouts ;
+; c_OUT    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                             ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "encoder_32_5:regEncoder" ;
++-------------+-------+----------+--------------------+
+; Port        ; Type  ; Severity ; Details            ;
++-------------+-------+----------+--------------------+
+; Cin[31..24] ; Input ; Info     ; Stuck at GND       ;
++-------------+-------+----------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mar:marUnit|Register:MAR"                                                               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Q[31..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Mar 17 19:30:54 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file shra_32.v
+    Info (12023): Found entity 1: Shra_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shra_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file shr_32.v
+    Info (12023): Found entity 1: Shr_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shr_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file shl_32.v
+    Info (12023): Found entity 1: Shl_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shl_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file ror_32.v
+    Info (12023): Found entity 1: Ror_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Ror_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file rol_32.v
+    Info (12023): Found entity 1: Rol_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Rol_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: Register File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Register.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file or_32.v
+    Info (12023): Found entity 1: Or_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Or_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file not_32.v
+    Info (12023): Found entity 1: Not_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Not_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file neg_32.v
+    Info (12023): Found entity 1: Neg_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Neg_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_32_1.v
+    Info (12023): Found entity 1: mux_32_1 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_32_1.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2_1.v
+    Info (12023): Found entity 1: mux_2_1 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_2_1.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mdrreg.v
+    Info (12023): Found entity 1: MDRreg File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mar.v
+    Info (12023): Found entity 1: mar File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mar.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file encoder_32_5.v
+    Info (12023): Found entity 1: encoder_32_5 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file division.v
+    Info (12023): Found entity 1: division File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb(deprecated).v
+    Info (12023): Found entity 1: datapath_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_tb(deprecated).v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_sub_tb.v
+    Info (12023): Found entity 1: datapath_sub_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_sub_tb.v Line: 3
+Warning (10229): Verilog HDL Expression warning at datapath_shra_tb.v(77): truncated literal to match 32 bits File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_shra_tb.v Line: 77
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_shra_tb.v
+    Info (12023): Found entity 1: datapath_shra_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_shra_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_shr_tb.v
+    Info (12023): Found entity 1: datapath_shr_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_shr_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_shl_tb.v
+    Info (12023): Found entity 1: datapath_shl_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_shl_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_or_tb.v
+    Info (12023): Found entity 1: datapath_or_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_or_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_not_tb.v
+    Info (12023): Found entity 1: datapath_not_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_not_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_neg_tb.v
+    Info (12023): Found entity 1: datapath_neg_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_neg_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_mul_tb.v
+    Info (12023): Found entity 1: datapath_mul_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_mul_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_div_tb.v
+    Info (12023): Found entity 1: datapath_div_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_div_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_and_tb.v
+    Info (12023): Found entity 1: datapath_and_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_and_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_add_tb.v
+    Info (12023): Found entity 1: datapath_add_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath_add_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file conff.v
+    Info (12023): Found entity 1: CONFF File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead_subtractor_tb.v
+    Info (12023): Found entity 1: carry_lookahead_subtractor_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor_tb.v Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file carry_lookahead_subtractor.v
+    Info (12023): Found entity 1: carry_lookahead_subtractor File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor.v Line: 1
+    Info (12023): Found entity 2: full_adder_sub File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor.v Line: 50
+Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead_adder_tb.v
+    Info (12023): Found entity 1: carry_lookahead_adder_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder_tb.v Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file carry_lookahead_adder.v
+    Info (12023): Found entity 1: Carry_lookahead_adder File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder.v Line: 1
+    Info (12023): Found entity 2: full_adder File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder.v Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file boothtb.v
+    Info (12023): Found entity 1: boothtb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/boothtb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file booths.v
+    Info (12023): Found entity 1: booths File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/booths.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_tb.v
+    Info (12023): Found entity 1: And_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/And_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file and_32.v
+    Info (12023): Found entity 1: And_32 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/And_32.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
+    Info (12023): Found entity 1: Alu_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: Alu File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file select_encode.v
+    Info (12023): Found entity 1: select_encode File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file select_encode_tb.v
+    Info (12023): Found entity 1: Select_encode_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Select_encode_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mul_64.v
+    Info (12023): Found entity 1: Mul_64 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Mul_64.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ld_tb.v
+    Info (12023): Found entity 1: ld_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ld_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file inport.v
+    Info (12023): Found entity 1: inport File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/inport.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file outport.v
+    Info (12023): Found entity 1: outport File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(123): created implicit net for "outportin" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at carry_lookahead_subtractor_tb.v(17): created implicit net for "w_carry_out" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor_tb.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at carry_lookahead_adder_tb.v(17): created implicit net for "w_carry_out" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder_tb.v Line: 17
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "Register" for hierarchy "Register:r0" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 35
+Info (12128): Elaborating entity "MDRreg" for hierarchy "MDRreg:MDR" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 68
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "MDRreg:MDR|mux_2_1:MDMux" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v Line: 8
+Info (12128): Elaborating entity "mar" for hierarchy "mar:marUnit" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 70
+Info (12128): Elaborating entity "CONFF" for hierarchy "CONFF:conff" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 72
+Warning (10240): Verilog HDL Always Construct warning at CONFF.v(41): inferring latch(es) for variable "control_output", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 41
+Info (10041): Inferred latch for "control_output" at CONFF.v(41) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 41
+Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:regEncoder" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 75
+Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(9): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 9
+Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(9): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 9
+Info (12128): Elaborating entity "mux_32_1" for hierarchy "mux_32_1:busMux" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 104
+Info (12128): Elaborating entity "Alu" for hierarchy "Alu:the_alu" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 113
+Info (12128): Elaborating entity "Carry_lookahead_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 106
+Info (12128): Elaborating entity "full_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder.v Line: 26
+Info (12128): Elaborating entity "carry_lookahead_subtractor" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 107
+Info (12128): Elaborating entity "full_adder_sub" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor.v Line: 26
+Info (12128): Elaborating entity "Shr_32" for hierarchy "Alu:the_alu|Shr_32:shr_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 108
+Info (12128): Elaborating entity "Shra_32" for hierarchy "Alu:the_alu|Shra_32:shra_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 109
+Info (12128): Elaborating entity "Shl_32" for hierarchy "Alu:the_alu|Shl_32:shl_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 110
+Info (12128): Elaborating entity "Ror_32" for hierarchy "Alu:the_alu|Ror_32:ror_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 111
+Info (12128): Elaborating entity "Rol_32" for hierarchy "Alu:the_alu|Rol_32:rol_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 112
+Info (12128): Elaborating entity "And_32" for hierarchy "Alu:the_alu|And_32:and_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 113
+Info (12128): Elaborating entity "Or_32" for hierarchy "Alu:the_alu|Or_32:or_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 114
+Info (12128): Elaborating entity "Neg_32" for hierarchy "Alu:the_alu|Neg_32:neg_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 115
+Info (12128): Elaborating entity "Not_32" for hierarchy "Alu:the_alu|Not_32:not_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 116
+Info (12128): Elaborating entity "division" for hierarchy "Alu:the_alu|division:Division" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 117
+Warning (10230): Verilog HDL assignment warning at division.v(40): truncated value with size 33 to match size of target (32) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v Line: 40
+Info (12128): Elaborating entity "Mul_64" for hierarchy "Alu:the_alu|Mul_64:mul_64" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 118
+Warning (10199): Verilog HDL Case Statement warning at mul_64.v(25): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 25
+Warning (10199): Verilog HDL Case Statement warning at mul_64.v(26): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 26
+Warning (10199): Verilog HDL Case Statement warning at mul_64.v(28): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 28
+Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:select" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 119
+Warning (10240): Verilog HDL Always Construct warning at select_encode.v(12): inferring latch(es) for variable "decoder_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 12
+Info (10041): Inferred latch for "decoder_in[0]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
+Info (10041): Inferred latch for "decoder_in[1]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
+Info (10041): Inferred latch for "decoder_in[2]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
+Info (10041): Inferred latch for "decoder_in[3]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
+Info (12128): Elaborating entity "outport" for hierarchy "outport:outport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 126
+Info (12128): Elaborating entity "inport" for hierarchy "inport:inport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 132
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 140
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 88
+Info (12130): Elaborated megafunction instantiation "ram:ram|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 88
+Info (12133): Instantiated megafunction "ram:ram|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 88
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ld_test.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ago1.tdf
+    Info (12023): Found entity 1: altsyncram_ago1 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/db/altsyncram_ago1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ago1" for hierarchy "ram:ram|altsyncram:altsyncram_component|altsyncram_ago1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Phase1/ELEC374/output_files/Phase1.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Sun Mar 17 19:31:05 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/intelFPGA_lite/18.1/Phase1/ELEC374/output_files/Phase1.map.smsg.
+
+
