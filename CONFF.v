@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 
-module ControlFF (
+module CONFF (
     output reg control_output,   // Output to control unit
     input control_input, clear,  // Control input signals
     input [1:0] instruction_register_bits, 
