@@ -2,7 +2,6 @@ module datapath(
     // Inputs
     input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout, CONin,
     input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,
-    input [4:0] operation,
     input clk,
     input clr, HIin, LOin, ZHIin, ZLOin, Cin,
 	 input [31:0] inport_data,
@@ -32,6 +31,7 @@ module datapath(
 	 wire [31:0] r0_out;
 	 wire branch_flag;
 	 wire [8:0] Mar_to_ram;
+	 
 	 Register r0(clr,clk,enableReg[0], BusMuxOut, r0_out);
 	 assign BusMuxIn_R0 = {32{!BAout}} & r0_out; 
 	 
@@ -54,7 +54,7 @@ module datapath(
     Register r15(clr, clk, enableReg[15], BusMuxOut, BusMuxIn_R15);
 
     // Instantiate other registers
-    Register PC(clr, clk, PCin, BusMuxOut, BusMuxIn_PC);
+    PC_reg PC(clr, clk, PCin, BusMuxOut, BusMuxIn_PC);
     Register Y(clr, clk, Yin, BusMuxOut, BusMuxIn_Y);
     Register Z_HI(clr, clk, ZHIin, C_data_out[63:32], BusMuxIn_ZHI);
     Register Z_LO(clr, clk, ZLOin, C_data_out[31:0], BusMuxIn_ZLO);
@@ -107,9 +107,11 @@ module datapath(
 	Alu the_alu(
 		.Rb(BusMuxOut),
 		.Ry(BusMuxIn_Y),
-		.Opcode(operation),
+		.Opcode(IRout_data[31:27]),
 		.C_out(C_data_out),
-		.branch_flag(branch_flag)
+		.branch_flag(branch_flag),
+		.IncPC(IncPC),
+		.inputPC(BusMuxIn_PC)
 	);
 	select_encode select(
 		.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
@@ -132,11 +134,12 @@ module datapath(
 		);
 	ram ram(
 		.address(Mar_to_ram),
-		.clock(clk),
-		.data(BusMuxOut),
-		.rden(Read),
-		.wren(Write),
-		.q(Mdatain)
+		.clk(clk),
+		.data_out(Mdatain),
+		.read(Read),
+		.write(Write),
+		.data_in(BusMuxOut)
 		);
+	
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Phase1
-Sun Mar 17 19:31:05 2024
+Thu Mar 21 17:41:12 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,111 +9,108 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_ago1:auto_generated
-  6. Parameter Settings for User Entity Instance: Register:r0
-  7. Parameter Settings for User Entity Instance: Register:r1
-  8. Parameter Settings for User Entity Instance: Register:r2
-  9. Parameter Settings for User Entity Instance: Register:r3
- 10. Parameter Settings for User Entity Instance: Register:r4
- 11. Parameter Settings for User Entity Instance: Register:r5
- 12. Parameter Settings for User Entity Instance: Register:r6
- 13. Parameter Settings for User Entity Instance: Register:r7
- 14. Parameter Settings for User Entity Instance: Register:r8
- 15. Parameter Settings for User Entity Instance: Register:r9
- 16. Parameter Settings for User Entity Instance: Register:r10
- 17. Parameter Settings for User Entity Instance: Register:r11
- 18. Parameter Settings for User Entity Instance: Register:r12
- 19. Parameter Settings for User Entity Instance: Register:r13
- 20. Parameter Settings for User Entity Instance: Register:r14
- 21. Parameter Settings for User Entity Instance: Register:r15
- 22. Parameter Settings for User Entity Instance: Register:PC
- 23. Parameter Settings for User Entity Instance: Register:Y
- 24. Parameter Settings for User Entity Instance: Register:Z_HI
- 25. Parameter Settings for User Entity Instance: Register:Z_LO
- 26. Parameter Settings for User Entity Instance: Register:HI
- 27. Parameter Settings for User Entity Instance: Register:LO
- 28. Parameter Settings for User Entity Instance: Register:IR
- 29. Parameter Settings for User Entity Instance: MDRreg:MDR|Register:regMDR
- 30. Parameter Settings for User Entity Instance: mar:marUnit|Register:MAR
- 31. Parameter Settings for User Entity Instance: Alu:the_alu
- 32. Parameter Settings for User Entity Instance: Alu:the_alu|Carry_lookahead_adder:add
- 33. Parameter Settings for User Entity Instance: Alu:the_alu|carry_lookahead_subtractor:sub
- 34. Parameter Settings for User Entity Instance: outport:outport|Register:outportreg
- 35. Parameter Settings for User Entity Instance: inport:inport|Register:inportreg
- 36. Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component
- 37. altsyncram Parameter Settings by Entity Instance
- 38. Analysis & Elaboration Settings
- 39. Port Connectivity Checks: "inport:inport|Register:inportreg"
- 40. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[31].full_adder_sub_inst"
- 41. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[30].full_adder_sub_inst"
- 42. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[29].full_adder_sub_inst"
- 43. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[28].full_adder_sub_inst"
- 44. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[27].full_adder_sub_inst"
- 45. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[26].full_adder_sub_inst"
- 46. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[25].full_adder_sub_inst"
- 47. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[24].full_adder_sub_inst"
- 48. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[23].full_adder_sub_inst"
- 49. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[22].full_adder_sub_inst"
- 50. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[21].full_adder_sub_inst"
- 51. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[20].full_adder_sub_inst"
- 52. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[19].full_adder_sub_inst"
- 53. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[18].full_adder_sub_inst"
- 54. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[17].full_adder_sub_inst"
- 55. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[16].full_adder_sub_inst"
- 56. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[15].full_adder_sub_inst"
- 57. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[14].full_adder_sub_inst"
- 58. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[13].full_adder_sub_inst"
- 59. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[12].full_adder_sub_inst"
- 60. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[11].full_adder_sub_inst"
- 61. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[10].full_adder_sub_inst"
- 62. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[9].full_adder_sub_inst"
- 63. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[8].full_adder_sub_inst"
- 64. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[7].full_adder_sub_inst"
- 65. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[6].full_adder_sub_inst"
- 66. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[5].full_adder_sub_inst"
- 67. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[4].full_adder_sub_inst"
- 68. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[3].full_adder_sub_inst"
- 69. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[2].full_adder_sub_inst"
- 70. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[1].full_adder_sub_inst"
- 71. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst"
- 72. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[31].full_adder_inst"
- 73. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[30].full_adder_inst"
- 74. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[29].full_adder_inst"
- 75. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[28].full_adder_inst"
- 76. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[27].full_adder_inst"
- 77. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[26].full_adder_inst"
- 78. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[25].full_adder_inst"
- 79. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[24].full_adder_inst"
- 80. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[23].full_adder_inst"
- 81. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[22].full_adder_inst"
- 82. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[21].full_adder_inst"
- 83. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[20].full_adder_inst"
- 84. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[19].full_adder_inst"
- 85. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[18].full_adder_inst"
- 86. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[17].full_adder_inst"
- 87. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[16].full_adder_inst"
- 88. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[15].full_adder_inst"
- 89. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[14].full_adder_inst"
- 90. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[13].full_adder_inst"
- 91. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[12].full_adder_inst"
- 92. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[11].full_adder_inst"
- 93. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[10].full_adder_inst"
- 94. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[9].full_adder_inst"
- 95. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[8].full_adder_inst"
- 96. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[7].full_adder_inst"
- 97. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[6].full_adder_inst"
- 98. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[5].full_adder_inst"
- 99. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[4].full_adder_inst"
-100. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[3].full_adder_inst"
-101. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[2].full_adder_inst"
-102. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[1].full_adder_inst"
-103. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst"
-104. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add"
-105. Port Connectivity Checks: "encoder_32_5:regEncoder"
-106. Port Connectivity Checks: "mar:marUnit|Register:MAR"
-107. Analysis & Elaboration Messages
-108. Analysis & Elaboration Suppressed Messages
+  4. Parameter Settings for User Entity Instance: Register:r0
+  5. Parameter Settings for User Entity Instance: Register:r1
+  6. Parameter Settings for User Entity Instance: Register:r2
+  7. Parameter Settings for User Entity Instance: Register:r3
+  8. Parameter Settings for User Entity Instance: Register:r4
+  9. Parameter Settings for User Entity Instance: Register:r5
+ 10. Parameter Settings for User Entity Instance: Register:r6
+ 11. Parameter Settings for User Entity Instance: Register:r7
+ 12. Parameter Settings for User Entity Instance: Register:r8
+ 13. Parameter Settings for User Entity Instance: Register:r9
+ 14. Parameter Settings for User Entity Instance: Register:r10
+ 15. Parameter Settings for User Entity Instance: Register:r11
+ 16. Parameter Settings for User Entity Instance: Register:r12
+ 17. Parameter Settings for User Entity Instance: Register:r13
+ 18. Parameter Settings for User Entity Instance: Register:r14
+ 19. Parameter Settings for User Entity Instance: Register:r15
+ 20. Parameter Settings for User Entity Instance: PC_reg:PC
+ 21. Parameter Settings for User Entity Instance: Register:Y
+ 22. Parameter Settings for User Entity Instance: Register:Z_HI
+ 23. Parameter Settings for User Entity Instance: Register:Z_LO
+ 24. Parameter Settings for User Entity Instance: Register:HI
+ 25. Parameter Settings for User Entity Instance: Register:LO
+ 26. Parameter Settings for User Entity Instance: Register:IR
+ 27. Parameter Settings for User Entity Instance: MDRreg:MDR|Register:regMDR
+ 28. Parameter Settings for User Entity Instance: mar:marUnit|Register:MAR
+ 29. Parameter Settings for User Entity Instance: Alu:the_alu
+ 30. Parameter Settings for User Entity Instance: Alu:the_alu|Carry_lookahead_adder:add
+ 31. Parameter Settings for User Entity Instance: Alu:the_alu|carry_lookahead_subtractor:sub
+ 32. Parameter Settings for User Entity Instance: Alu:the_alu|PC:pc
+ 33. Parameter Settings for User Entity Instance: outport:outport|Register:outportreg
+ 34. Parameter Settings for User Entity Instance: inport:inport|Register:inportreg
+ 35. Analysis & Elaboration Settings
+ 36. Port Connectivity Checks: "inport:inport|Register:inportreg"
+ 37. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[31].full_adder_sub_inst"
+ 38. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[30].full_adder_sub_inst"
+ 39. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[29].full_adder_sub_inst"
+ 40. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[28].full_adder_sub_inst"
+ 41. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[27].full_adder_sub_inst"
+ 42. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[26].full_adder_sub_inst"
+ 43. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[25].full_adder_sub_inst"
+ 44. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[24].full_adder_sub_inst"
+ 45. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[23].full_adder_sub_inst"
+ 46. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[22].full_adder_sub_inst"
+ 47. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[21].full_adder_sub_inst"
+ 48. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[20].full_adder_sub_inst"
+ 49. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[19].full_adder_sub_inst"
+ 50. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[18].full_adder_sub_inst"
+ 51. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[17].full_adder_sub_inst"
+ 52. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[16].full_adder_sub_inst"
+ 53. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[15].full_adder_sub_inst"
+ 54. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[14].full_adder_sub_inst"
+ 55. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[13].full_adder_sub_inst"
+ 56. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[12].full_adder_sub_inst"
+ 57. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[11].full_adder_sub_inst"
+ 58. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[10].full_adder_sub_inst"
+ 59. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[9].full_adder_sub_inst"
+ 60. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[8].full_adder_sub_inst"
+ 61. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[7].full_adder_sub_inst"
+ 62. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[6].full_adder_sub_inst"
+ 63. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[5].full_adder_sub_inst"
+ 64. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[4].full_adder_sub_inst"
+ 65. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[3].full_adder_sub_inst"
+ 66. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[2].full_adder_sub_inst"
+ 67. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[1].full_adder_sub_inst"
+ 68. Port Connectivity Checks: "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst"
+ 69. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[31].full_adder_inst"
+ 70. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[30].full_adder_inst"
+ 71. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[29].full_adder_inst"
+ 72. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[28].full_adder_inst"
+ 73. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[27].full_adder_inst"
+ 74. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[26].full_adder_inst"
+ 75. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[25].full_adder_inst"
+ 76. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[24].full_adder_inst"
+ 77. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[23].full_adder_inst"
+ 78. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[22].full_adder_inst"
+ 79. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[21].full_adder_inst"
+ 80. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[20].full_adder_inst"
+ 81. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[19].full_adder_inst"
+ 82. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[18].full_adder_inst"
+ 83. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[17].full_adder_inst"
+ 84. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[16].full_adder_inst"
+ 85. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[15].full_adder_inst"
+ 86. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[14].full_adder_inst"
+ 87. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[13].full_adder_inst"
+ 88. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[12].full_adder_inst"
+ 89. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[11].full_adder_inst"
+ 90. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[10].full_adder_inst"
+ 91. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[9].full_adder_inst"
+ 92. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[8].full_adder_inst"
+ 93. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[7].full_adder_inst"
+ 94. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[6].full_adder_inst"
+ 95. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[5].full_adder_inst"
+ 96. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[4].full_adder_inst"
+ 97. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[3].full_adder_inst"
+ 98. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[2].full_adder_inst"
+ 99. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[1].full_adder_inst"
+100. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst"
+101. Port Connectivity Checks: "Alu:the_alu|Carry_lookahead_adder:add"
+102. Port Connectivity Checks: "encoder_32_5:regEncoder"
+103. Port Connectivity Checks: "mar:marUnit|Register:MAR"
+104. Analysis & Elaboration Messages
+105. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -139,7 +136,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Mar 17 19:31:05 2024       ;
+; Analysis & Elaboration Status ; Successful - Thu Mar 21 17:41:12 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; Phase1                                      ;
 ; Top-level Entity Name         ; datapath                                    ;
@@ -168,24 +165,6 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                             ;
-+--------+--------------+---------+--------------+--------------+-------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance   ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+-------------------+-----------------+
-; Altera ; RAM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |datapath|ram:ram ; ram.v           ;
-+--------+--------------+---------+--------------+--------------+-------------------+-----------------+
-
-
-+-----------------------------------------------------------------------------------------------+
-; Source assignments for ram:ram|altsyncram:altsyncram_component|altsyncram_ago1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------+
-; Assignment                      ; Value              ; From ; To                              ;
-+---------------------------------+--------------------+------+---------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
-+---------------------------------+--------------------+------+---------------------------------+
 
 
 +----------------------------------------------------------+
@@ -348,13 +327,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Register:PC ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; VAL            ; 0     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC_reg:PC ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; VAL            ; 90    ; Signed Integer                ;
++----------------+-------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -489,6 +468,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Alu:the_alu|PC:pc ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; qInitial       ; 90    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: outport:outport|Register:outportreg ;
 +----------------+-------+---------------------------------------------------------+
@@ -507,87 +496,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; VAL            ; 0     ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ram:ram|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+--------------------------+
-; Parameter Name                     ; Value                ; Type                     ;
-+------------------------------------+----------------------+--------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                  ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY               ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY             ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE             ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE           ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                  ;
-; WIDTH_A                            ; 32                   ; Signed Integer           ;
-; WIDTHAD_A                          ; 9                    ; Signed Integer           ;
-; NUMWORDS_A                         ; 512                  ; Signed Integer           ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                  ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                  ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
-; WIDTH_B                            ; 1                    ; Untyped                  ;
-; WIDTHAD_B                          ; 1                    ; Untyped                  ;
-; NUMWORDS_B                         ; 1                    ; Untyped                  ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                  ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                  ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                  ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                  ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                  ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                  ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                  ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer           ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                  ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                  ;
-; BYTE_SIZE                          ; 8                    ; Untyped                  ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                  ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
-; INIT_FILE                          ; ld_test.hex          ; Untyped                  ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                  ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                  ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                  ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                  ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                  ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                  ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                  ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                  ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                  ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                  ;
-; CBXI_PARAMETER                     ; altsyncram_ago1      ; Untyped                  ;
-+------------------------------------+----------------------+--------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                    ;
-+-------------------------------------------+-----------------------------------------+
-; Name                                      ; Value                                   ;
-+-------------------------------------------+-----------------------------------------+
-; Number of entity instances                ; 1                                       ;
-; Entity Instance                           ; ram:ram|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                             ;
-;     -- WIDTH_A                            ; 32                                      ;
-;     -- NUMWORDS_A                         ; 512                                     ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                  ;
-;     -- WIDTH_B                            ; 1                                       ;
-;     -- NUMWORDS_B                         ; 1                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
-+-------------------------------------------+-----------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -1298,7 +1206,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Mar 17 19:30:54 2024
+    Info: Processing started: Thu Mar 21 17:41:02 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1398,12 +1306,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file inport.
 Info (12021): Found 1 design units, including 1 entities, in source file outport.v
     Info (12023): Found entity 1: outport File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: ram File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(123): created implicit net for "outportin" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 123
+    Info (12023): Found entity 1: ram File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.v
+    Info (12023): Found entity 1: PC_reg File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC_reg.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(125): created implicit net for "outportin" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 125
 Warning (10236): Verilog HDL Implicit Net warning at carry_lookahead_subtractor_tb.v(17): created implicit net for "w_carry_out" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor_tb.v Line: 17
 Warning (10236): Verilog HDL Implicit Net warning at carry_lookahead_adder_tb.v(17): created implicit net for "w_carry_out" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder_tb.v Line: 17
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Info (12128): Elaborating entity "Register" for hierarchy "Register:r0" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 35
+Info (12128): Elaborating entity "PC_reg" for hierarchy "PC_reg:PC" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 57
 Info (12128): Elaborating entity "MDRreg" for hierarchy "MDRreg:MDR" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 68
 Info (12128): Elaborating entity "mux_2_1" for hierarchy "MDRreg:MDR|mux_2_1:MDMux" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v Line: 8
 Info (12128): Elaborating entity "mar" for hierarchy "mar:marUnit" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 70
@@ -1414,63 +1325,143 @@ Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:regE
 Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(9): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 9
 Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(9): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 9
 Info (12128): Elaborating entity "mux_32_1" for hierarchy "mux_32_1:busMux" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 104
-Info (12128): Elaborating entity "Alu" for hierarchy "Alu:the_alu" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 113
-Info (12128): Elaborating entity "Carry_lookahead_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 106
+Info (12128): Elaborating entity "Alu" for hierarchy "Alu:the_alu" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 115
+Warning (10240): Verilog HDL Always Construct warning at Alu.v(39): inferring latch(es) for variable "C_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[32]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[33]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[34]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[35]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[36]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[37]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[38]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[39]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[40]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[41]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[42]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[43]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[44]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[45]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[46]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[47]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[48]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[49]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[50]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[51]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[52]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[53]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[54]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[55]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[56]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[57]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[58]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[59]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[60]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[61]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[62]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (10041): Inferred latch for "C_out[63]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
+Info (12128): Elaborating entity "Carry_lookahead_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 113
 Info (12128): Elaborating entity "full_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder.v Line: 26
-Info (12128): Elaborating entity "carry_lookahead_subtractor" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 107
+Info (12128): Elaborating entity "carry_lookahead_subtractor" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 114
 Info (12128): Elaborating entity "full_adder_sub" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor.v Line: 26
-Info (12128): Elaborating entity "Shr_32" for hierarchy "Alu:the_alu|Shr_32:shr_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 108
-Info (12128): Elaborating entity "Shra_32" for hierarchy "Alu:the_alu|Shra_32:shra_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 109
-Info (12128): Elaborating entity "Shl_32" for hierarchy "Alu:the_alu|Shl_32:shl_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 110
-Info (12128): Elaborating entity "Ror_32" for hierarchy "Alu:the_alu|Ror_32:ror_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 111
-Info (12128): Elaborating entity "Rol_32" for hierarchy "Alu:the_alu|Rol_32:rol_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 112
-Info (12128): Elaborating entity "And_32" for hierarchy "Alu:the_alu|And_32:and_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 113
-Info (12128): Elaborating entity "Or_32" for hierarchy "Alu:the_alu|Or_32:or_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 114
-Info (12128): Elaborating entity "Neg_32" for hierarchy "Alu:the_alu|Neg_32:neg_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 115
-Info (12128): Elaborating entity "Not_32" for hierarchy "Alu:the_alu|Not_32:not_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 116
-Info (12128): Elaborating entity "division" for hierarchy "Alu:the_alu|division:Division" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 117
+Info (12128): Elaborating entity "Shr_32" for hierarchy "Alu:the_alu|Shr_32:shr_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 115
+Info (12128): Elaborating entity "Shra_32" for hierarchy "Alu:the_alu|Shra_32:shra_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 116
+Info (12128): Elaborating entity "Shl_32" for hierarchy "Alu:the_alu|Shl_32:shl_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 117
+Info (12128): Elaborating entity "Ror_32" for hierarchy "Alu:the_alu|Ror_32:ror_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 118
+Info (12128): Elaborating entity "Rol_32" for hierarchy "Alu:the_alu|Rol_32:rol_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 119
+Info (12128): Elaborating entity "And_32" for hierarchy "Alu:the_alu|And_32:and_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 120
+Info (12128): Elaborating entity "Or_32" for hierarchy "Alu:the_alu|Or_32:or_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 121
+Info (12128): Elaborating entity "Neg_32" for hierarchy "Alu:the_alu|Neg_32:neg_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 122
+Info (12128): Elaborating entity "Not_32" for hierarchy "Alu:the_alu|Not_32:not_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 123
+Info (12128): Elaborating entity "division" for hierarchy "Alu:the_alu|division:Division" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 124
 Warning (10230): Verilog HDL assignment warning at division.v(40): truncated value with size 33 to match size of target (32) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v Line: 40
-Info (12128): Elaborating entity "Mul_64" for hierarchy "Alu:the_alu|Mul_64:mul_64" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 118
+Info (12128): Elaborating entity "Mul_64" for hierarchy "Alu:the_alu|Mul_64:mul_64" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 125
 Warning (10199): Verilog HDL Case Statement warning at mul_64.v(25): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 25
 Warning (10199): Verilog HDL Case Statement warning at mul_64.v(26): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 26
 Warning (10199): Verilog HDL Case Statement warning at mul_64.v(28): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 28
-Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:select" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 119
+Info (12128): Elaborating entity "PC" for hierarchy "Alu:the_alu|PC:pc" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 126
+Warning (10235): Verilog HDL Always Construct warning at PC.v(13): variable "inputPC" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 13
+Warning (10240): Verilog HDL Always Construct warning at PC.v(11): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 11
+Info (10041): Inferred latch for "temp[0]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[1]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[2]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[3]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[4]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[5]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[6]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[7]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[8]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[9]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[10]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[11]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[12]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[13]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[14]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[15]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[16]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[17]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[18]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[19]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[20]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[21]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[22]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[23]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[24]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[25]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[26]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[27]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[28]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[29]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[30]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (10041): Inferred latch for "temp[31]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
+Info (12128): Elaborating entity "select_encode" for hierarchy "select_encode:select" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 121
 Warning (10240): Verilog HDL Always Construct warning at select_encode.v(12): inferring latch(es) for variable "decoder_in", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 12
 Info (10041): Inferred latch for "decoder_in[0]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
 Info (10041): Inferred latch for "decoder_in[1]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
 Info (10041): Inferred latch for "decoder_in[2]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
 Info (10041): Inferred latch for "decoder_in[3]" at select_encode.v(13) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/select_encode.v Line: 13
-Info (12128): Elaborating entity "outport" for hierarchy "outport:outport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 126
-Info (12128): Elaborating entity "inport" for hierarchy "inport:inport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 132
-Info (12128): Elaborating entity "ram" for hierarchy "ram:ram" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 140
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 88
-Info (12130): Elaborated megafunction instantiation "ram:ram|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 88
-Info (12133): Instantiated megafunction "ram:ram|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 88
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "ld_test.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone V"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "512"
-    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
-    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
-    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
-    Info (12134): Parameter "widthad_a" = "9"
-    Info (12134): Parameter "width_a" = "32"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ago1.tdf
-    Info (12023): Found entity 1: altsyncram_ago1 File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/db/altsyncram_ago1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_ago1" for hierarchy "ram:ram|altsyncram:altsyncram_component|altsyncram_ago1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "outport" for hierarchy "outport:outport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 128
+Info (12128): Elaborating entity "inport" for hierarchy "inport:inport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 134
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 142
+Warning (10240): Verilog HDL Always Construct warning at ram.v(19): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[0]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[1]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[2]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[3]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[4]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[5]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[6]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[7]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[8]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[9]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[10]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[11]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[12]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[13]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[14]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[15]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[16]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[17]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[18]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[19]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[20]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[21]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[22]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[23]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[24]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[25]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[26]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[27]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[28]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[29]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[30]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
+Info (10041): Inferred latch for "temp[31]" at ram.v(19) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 19
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Phase1/ELEC374/output_files/Phase1.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4801 megabytes
-    Info: Processing ended: Sun Mar 17 19:31:05 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Thu Mar 21 17:41:12 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +--------------------------------------------+

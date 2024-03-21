@@ -11,6 +11,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/Ror_32.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/Rol_32.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/Register.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/Or_32.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/Not_32.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/Neg_32.v}
@@ -31,6 +32,7 @@ vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/inport.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v}
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC_reg.v}
 
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374 {C:/intelFPGA_lite/18.1/Phase1/ELEC374/ld_tb.v}
 
