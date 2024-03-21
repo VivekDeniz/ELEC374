@@ -25,6 +25,7 @@ module datapath(
     wire [31:0] BusMuxIn_R15, BusMuxIn_R14, BusMuxIn_R13, BusMuxIn_R12, BusMuxIn_R11, BusMuxIn_R10, BusMuxIn_R9, BusMuxIn_R8, BusMuxIn_R7, BusMuxIn_R6, BusMuxIn_R5, BusMuxIn_R4, BusMuxIn_R3, BusMuxIn_R2, BusMuxIn_R1, BusMuxIn_R0;
     //wire [31:0] bus_signal;
 	 wire [63:0] C_data_out, BusMuxIn_MAR;
+	 wire [63:0] C_data_out, BusMuxIn_MAR;
     wire [31:0] BusMuxOut,IRout_data;
 	 wire [15:0] enableReg,enableRout;
 	 wire [31:0] Mdatain;
@@ -36,6 +37,7 @@ module datapath(
 	 assign BusMuxIn_R0 = {32{!BAout}} & r0_out; 
 	 
     // Instantiate registers from 0 to 15
+  
   
     Register r1(clr, clk, enableReg[1], BusMuxOut, BusMuxIn_R1);
     Register r2(clr, clk, enableReg[2], BusMuxOut, BusMuxIn_R2);
@@ -113,6 +115,12 @@ module datapath(
 		.IncPC(IncPC),
 		.inputPC(BusMuxIn_PC)
 	);
+	select_encode select(
+		.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
+		.IR(IRout_data),
+		.Rin_to_reg(enableReg),.Rout_to_reg(enableRout),
+		.C_sign_extended(C_sign_extend)
+		);
 	select_encode select(
 		.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
 		.IR(IRout_data),
