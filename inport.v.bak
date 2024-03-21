@@ -1,0 +1,10 @@
+module inport(
+	input clr,clk,outportin, 
+	input [31:0]inportin,
+	output [31:0] BusMuxIn
+	);
+	wire data_out;
+	Register	inportreg(clr, clk, outportin,inportin, data_out);
+	assign BusMuxIn=data_out;
+		
+endmodule 

@@ -1,0 +1,3 @@
+module outport(input clear,clock,outportin, 
+					input [31:0]BusMuxOut,
+					output [31:0]output

@@ -1,14 +1,16 @@
 `timescale 1ns / 10ps
 
-module PC #(parameter qInitial = 0)(
+module PC #(parameter qInitial = 90)(
     input IncPC,
     input [31:0] inputPC,
-    output reg[31:0] newPC
+    output wire[31:0] newPC
     );
-
-initial newPC = qInitial;
-always@(IncPC)begin
-   if (IncPC)
-     newPC = inputPC + 1;
-end
+	reg [31:0] temp;
+	initial temp = qInitial;
+	
+	always@(IncPC)begin
+		if (IncPC)
+		  temp = inputPC + 1;
+	end
+	assign newPC= temp;
 endmodule
