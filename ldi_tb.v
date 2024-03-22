@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 
-module ld_tb();
+module ldi_tb();
     reg PCout, ZHighout, Zlowout, Hiout, Loout, InPortout, Cout,CONin, MDRout;
     reg MARin, PCin, MDRin, IRin, Yin, read, write,IncPC, Gra,Grb,Grc, Rin,Rout,BAout;
     
@@ -88,17 +88,11 @@ module ld_tb();
             end
             T5: begin
 					
-               Zlowout <= 1; MARin<=1;
-					#15 Zlowout <= 0; MARin<=0;
+               Zlowout <= 1; Gra<=1;Rin<=1;
+					#15 Zlowout <= 0; Gra<=0;Rin<=0;Present_state<=0000;
             end
-				T6 : begin
-					read<=1; MDRin<=1;
-					#15 read<=0; MDRin<=0;
-				end
-				T7 : begin
-					MDRout<=1; Gra<=1;Rin<=1;
-					#15 MDRout<=0; Gra<=0;Rin<=0;Present_state<=0000;
-				end
+				
+				
         endcase
     end
 endmodule
