@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/18.1/Phase1/ELEC374/simulation/modelsim
 vAlu
-Z1 !s110 1711057307
+Z1 !s110 1711069341
 !i10b 1
 !s100 L]MA240<Zoa[D7]cUHUd>2
 I6>4USeY45iUz^]ZXz?2=J2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1710783674
+w1711058446
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1711057307.000000
+Z4 !s108 1711069341.000000
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v|
 !i113 1
@@ -114,7 +114,7 @@ R3
 r1
 !s85 0
 31
-R4
+Z18 !s108 1711069340.000000
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v|
 !i113 1
@@ -123,13 +123,13 @@ R6
 R7
 n@c@o@n@f@f
 vdatapath
-R1
+Z19 !s110 1711069340
 !i10b 1
-!s100 KFj3f<J^?@1ng;mLCKebS1
-IMPL6nT2304MAgmV7L`LE>0
+!s100 GLY>gNiA9Ffa:BMZ]R:^V2
+IMlaE<7?Fm[;a^O143_L1:0
 R2
 R0
-w1711057259
+w1711069125
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v
 L0 1
@@ -137,7 +137,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v|
 !i113 1
@@ -145,13 +145,13 @@ R5
 R6
 R7
 vdivision
-R1
+R19
 !i10b 1
 !s100 eL0FW@@b8Ud<OFIBfY@hO0
 IUXj`og]3c?>_0;8CSh@c:0
 R2
 R0
-Z18 w1709848002
+Z20 w1709848002
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v
 L0 1
@@ -159,7 +159,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v|
 !i113 1
@@ -167,13 +167,13 @@ R5
 R6
 R7
 vencoder_32_5
-R1
+R19
 !i10b 1
 !s100 iUZN3b[XM_[Y^`=HULBN70
 IzGiU<<e?o>a261mgZF2B90
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v
 L0 3
@@ -181,7 +181,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v|
 !i113 1
@@ -233,13 +233,13 @@ R5
 R6
 R7
 vinport
-Z19 !s110 1711057308
+R1
 !i10b 1
 !s100 XFbcWRl>midi?J5<5DYzi2
 IMmXihEBYAGj=KVBGGkTd90
 R2
 R0
-w1710713590
+w1711058569
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/inport.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/inport.v
 L0 1
@@ -254,30 +254,30 @@ R4
 R5
 R6
 R7
-vld_tb
-R19
+vldi_tb
+R1
 !i10b 1
-!s100 B]j:l8Ez?dm5<[X@::T<L0
-IBIm[RlHCXk6H;7AFNaMb12
+!s100 FZWOzCDz5bH<a^C=XI3A@1
+ITQ1H50WHfQ[ZinbZLE_`_0
 R2
 R0
-w1711055510
-8C:/intelFPGA_lite/18.1/Phase1/ELEC374/ld_tb.v
-FC:/intelFPGA_lite/18.1/Phase1/ELEC374/ld_tb.v
+w1711060249
+8C:/intelFPGA_lite/18.1/Phase1/ELEC374/ldi_tb.v
+FC:/intelFPGA_lite/18.1/Phase1/ELEC374/ldi_tb.v
 L0 3
 R3
 r1
 !s85 0
 31
-Z20 !s108 1711057308.000000
-!s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/ld_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/ld_tb.v|
+R4
+!s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/ldi_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/ldi_tb.v|
 !i113 1
 R5
 R6
 R7
 vmar
-R1
+R19
 !i10b 1
 !s100 Ik^cAbIWCWAoZj[ja]NMz0
 Ie=0PeVKmD9A>jN>mgN5^Q3
@@ -291,7 +291,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/mar.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/mar.v|
 !i113 1
@@ -299,13 +299,13 @@ R5
 R6
 R7
 vMDRreg
-R1
+R19
 !i10b 1
 !s100 4acb=02OzGoBe`UkYE3PD2
 IBccRVQIo^G1[Xn2nGU2][1
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v
 L0 2
@@ -313,7 +313,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v|
 !i113 1
@@ -345,7 +345,7 @@ R6
 R7
 n@mul_64
 vmux_2_1
-R1
+R19
 !i10b 1
 !s100 ]bh46kSCM>jibINa8>Ecg2
 I<ec5bkGQS^^UjQkm_]KH60
@@ -359,7 +359,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_2_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_2_1.v|
 !i113 1
@@ -367,13 +367,13 @@ R5
 R6
 R7
 vmux_32_1
-R1
+R19
 !i10b 1
 !s100 Q2L7Oomm4Cm>oGHEg3ZXm1
 IN9j3HI5ofNQ<DHnzT80mK0
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_32_1.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_32_1.v
 L0 3
@@ -381,7 +381,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_32_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/mux_32_1.v|
 !i113 1
@@ -389,7 +389,7 @@ R5
 R6
 R7
 vNeg_32
-R1
+R19
 !i10b 1
 !s100 6bgF]JDz6hkjCcD_H3oJc1
 I;l7Zk>M6zajGSncnDZkd10
@@ -403,7 +403,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Neg_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Neg_32.v|
 !i113 1
@@ -412,13 +412,13 @@ R6
 R7
 n@neg_32
 vNot_32
-R1
+R19
 !i10b 1
 !s100 7Z8kNAc_H^NGaEjkYUh^92
 InFKhK9mE1TzM_h;nO?W=12
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Not_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Not_32.v
 L0 1
@@ -426,7 +426,7 @@ R3
 r1
 !s85 0
 31
-R4
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Not_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Not_32.v|
 !i113 1
@@ -435,13 +435,13 @@ R6
 R7
 n@not_32
 vOr_32
-Z21 !s110 1711057306
+R19
 !i10b 1
 !s100 g4Eh8P;kR7EEU`4MchLFQ3
 IGOTK3FAdQ:j^o?6MX6kU;1
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Or_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Or_32.v
 L0 5
@@ -449,7 +449,7 @@ R3
 r1
 !s85 0
 31
-Z22 !s108 1711057306.000000
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Or_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Or_32.v|
 !i113 1
@@ -458,13 +458,13 @@ R6
 R7
 n@or_32
 voutport
-R19
+R1
 !i10b 1
 !s100 9BkG6Hj2[VjLHH:[Z]e3f2
 I::6;hmSaSaFQlYzb5_iAB0
 R2
 R0
-w1710715413
+w1711058592
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v
 L0 1
@@ -472,7 +472,7 @@ R3
 r1
 !s85 0
 31
-R20
+R4
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/outport.v|
 !i113 1
@@ -480,7 +480,7 @@ R5
 R6
 R7
 vPC
-R21
+R19
 !i10b 1
 !s100 QzZh9h;^UBZ7TQ>^Z>54d2
 IZBlBTmj?4]=P:3DOFE>E53
@@ -494,7 +494,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v|
 !i113 1
@@ -503,7 +503,7 @@ R6
 R7
 n@p@c
 vPC_reg
-R19
+R1
 !i10b 1
 !s100 UJMX@:oNhB2_IcY2:YPf_2
 Im0Q7h>3FW;D^kGmPjW4672
@@ -517,7 +517,7 @@ R3
 r1
 !s85 0
 31
-R20
+R4
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC_reg.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC_reg.v|
 !i113 1
@@ -526,13 +526,13 @@ R6
 R7
 n@p@c_reg
 vram
-R19
+R1
 !i10b 1
-!s100 VcXg@c:D5Qf>5QhR1kzON0
-In6@5OWgMH[]o9BMbPDKk_1
+!s100 c8_aR8I69M>l0Ba6HS^Md2
+IT6N8PWM_==F?@BQU]NjBC3
 R2
 R0
-w1711057262
+w1711069312
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v
 L0 1
@@ -540,7 +540,7 @@ R3
 r1
 !s85 0
 31
-R20
+R4
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v|
 !i113 1
@@ -548,13 +548,13 @@ R5
 R6
 R7
 vRegister
-R21
+R19
 !i10b 1
 !s100 hUP@cEzYT[z2Mm0icF_E=3
 In]:UCBBFcI6F40:hZ>R2i3
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Register.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Register.v
 L0 1
@@ -562,7 +562,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Register.v|
 !i113 1
@@ -571,13 +571,13 @@ R6
 R7
 n@register
 vRol_32
-R21
+R19
 !i10b 1
 !s100 i5R3>OLlIQA]LJ5II<MKf3
 IDWaek3llFk`MJf2ZN>oce1
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Rol_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Rol_32.v
 L0 5
@@ -585,7 +585,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Rol_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Rol_32.v|
 !i113 1
@@ -594,13 +594,13 @@ R6
 R7
 n@rol_32
 vRor_32
-R21
+R19
 !i10b 1
 !s100 ZHYXldjZkh<3g5e4SXz;U1
 IKd>LoAZ<CY<DVoYaPd13O1
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Ror_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Ror_32.v
 L0 5
@@ -608,7 +608,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Ror_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Ror_32.v|
 !i113 1
@@ -639,13 +639,13 @@ R5
 R6
 R7
 vShl_32
-R21
+R19
 !i10b 1
 !s100 4bRN4G7f3dRZlhUIe43AB1
 IUhDe_ohF[NgQXW<n78N@>0
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shl_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Shl_32.v
 L0 5
@@ -653,7 +653,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shl_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shl_32.v|
 !i113 1
@@ -662,13 +662,13 @@ R6
 R7
 n@shl_32
 vShr_32
-R21
+R19
 !i10b 1
 !s100 YMNl=k5@ADH0O66BI4TKA1
 IRRKb]>L5i^LX6F8fje95`3
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shr_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Shr_32.v
 L0 5
@@ -676,7 +676,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shr_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shr_32.v|
 !i113 1
@@ -685,13 +685,13 @@ R6
 R7
 n@shr_32
 vShra_32
-R21
+R19
 !i10b 1
 !s100 VjCoAzBzE10KEZFaLdX?L0
 IhI7L`]^e706IG3Sj?O=do2
 R2
 R0
-R18
+R20
 8C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shra_32.v
 FC:/intelFPGA_lite/18.1/Phase1/ELEC374/Shra_32.v
 L0 5
@@ -699,7 +699,7 @@ R3
 r1
 !s85 0
 31
-R22
+R18
 !s107 C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shra_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/intelFPGA_lite/18.1/Phase1/ELEC374|C:/intelFPGA_lite/18.1/Phase1/ELEC374/Shra_32.v|
 !i113 1
