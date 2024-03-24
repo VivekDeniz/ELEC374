@@ -7,14 +7,17 @@ module CONFF (
     input [31:0] bus_mux_output  
 );
 
-    wire instruction_bit_0 = instruction_register_bits[0];
-    wire instruction_bit_1 = instruction_register_bits[1];
+    wire instruction_bit_0;
+    wire instruction_bit_1;
   
     reg [4:0] decoder_output;
   
     wire decoder_output_active, and_gate_0, and_gate_1, and_gate_2, and_gate_3, nor_gate_output;
     wire or_lt_0, or_gte_0, or_nonzero, or_bit_0;
-  
+	 assign instruction_bit_0 = instruction_register_bits[0];
+    assign instruction_bit_1 = instruction_register_bits[1];
+	 
+	 initial control_output <= 0;
     always @ (*)
     begin
         case ({instruction_bit_1, instruction_bit_0})
@@ -38,7 +41,7 @@ module CONFF (
                     
     always @ (*)
     begin
-        if (clear == 0)
+        if (clear == 1)
             control_output <= 0;
         else if (control_input)
             control_output <= decoder_output_active;
