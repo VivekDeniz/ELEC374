@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Phase1
-Thu Mar 21 21:02:02 2024
+Sun Mar 24 16:58:31 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -136,7 +136,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Mar 21 21:02:02 2024       ;
+; Analysis & Elaboration Status ; Successful - Sun Mar 24 16:58:31 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; Phase1                                      ;
 ; Top-level Entity Name         ; datapath                                    ;
@@ -1206,7 +1206,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 21 21:01:53 2024
+    Info: Processing started: Sun Mar 24 16:58:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1311,7 +1311,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file pc_reg.
     Info (12023): Found entity 1: PC_reg File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC_reg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ldi_tb.v
     Info (12023): Found entity 1: ldi_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ldi_tb.v Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(127): created implicit net for "outportin" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 127
+Info (12021): Found 1 design units, including 1 entities, in source file st_tb.v
+    Info (12023): Found entity 1: st_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/st_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file addi_tb.v
+    Info (12023): Found entity 1: addi_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/addi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file andi_tb.v
+    Info (12023): Found entity 1: andi_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/andi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file br_tb.v
+    Info (12023): Found entity 1: br_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/br_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file jr_tb.v
+    Info (12023): Found entity 1: jr_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/jr_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file jal_tb.v
+    Info (12023): Found entity 1: jal_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/jal_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mfhi_tb.v
+    Info (12023): Found entity 1: mfhi_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mfhi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mflo_tb.v
+    Info (12023): Found entity 1: mflo_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mflo_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file out_tb.v
+    Info (12023): Found entity 1: out_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/out_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file in_tb.v
+    Info (12023): Found entity 1: in_tb File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/in_tb.v Line: 3
 Warning (10236): Verilog HDL Implicit Net warning at carry_lookahead_subtractor_tb.v(17): created implicit net for "w_carry_out" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor_tb.v Line: 17
 Warning (10236): Verilog HDL Implicit Net warning at carry_lookahead_adder_tb.v(17): created implicit net for "w_carry_out" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder_tb.v Line: 17
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
@@ -1321,13 +1340,14 @@ Info (12128): Elaborating entity "MDRreg" for hierarchy "MDRreg:MDR" File: C:/in
 Info (12128): Elaborating entity "mux_2_1" for hierarchy "MDRreg:MDR|mux_2_1:MDMux" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/MDRreg.v Line: 8
 Info (12128): Elaborating entity "mar" for hierarchy "mar:marUnit" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 71
 Info (12128): Elaborating entity "CONFF" for hierarchy "CONFF:conff" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 73
-Warning (10240): Verilog HDL Always Construct warning at CONFF.v(41): inferring latch(es) for variable "control_output", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 41
-Info (10041): Inferred latch for "control_output" at CONFF.v(41) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 41
+Warning (10240): Verilog HDL Always Construct warning at CONFF.v(44): inferring latch(es) for variable "control_output", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 44
+Info (10041): Inferred latch for "control_output" at CONFF.v(44) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/CONFF.v Line: 44
 Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:regEncoder" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 76
 Warning (10762): Verilog HDL Case Statement warning at encoder_32_5.v(9): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 9
 Info (10264): Verilog HDL Case Statement information at encoder_32_5.v(9): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/encoder_32_5.v Line: 9
 Info (12128): Elaborating entity "mux_32_1" for hierarchy "mux_32_1:busMux" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 105
 Info (12128): Elaborating entity "Alu" for hierarchy "Alu:the_alu" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 116
+Warning (10272): Verilog HDL Case Statement warning at Alu.v(81): case item expression covers a value already covered by a previous case item File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 81
 Warning (10240): Verilog HDL Always Construct warning at Alu.v(39): inferring latch(es) for variable "C_out", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
 Info (10041): Inferred latch for "C_out[32]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
 Info (10041): Inferred latch for "C_out[33]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
@@ -1361,26 +1381,26 @@ Info (10041): Inferred latch for "C_out[60]" at Alu.v(39) File: C:/intelFPGA_lit
 Info (10041): Inferred latch for "C_out[61]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
 Info (10041): Inferred latch for "C_out[62]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
 Info (10041): Inferred latch for "C_out[63]" at Alu.v(39) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 39
-Info (12128): Elaborating entity "Carry_lookahead_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 113
+Info (12128): Elaborating entity "Carry_lookahead_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 117
 Info (12128): Elaborating entity "full_adder" for hierarchy "Alu:the_alu|Carry_lookahead_adder:add|full_adder:gen_loop[0].full_adder_inst" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_adder.v Line: 26
-Info (12128): Elaborating entity "carry_lookahead_subtractor" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 114
+Info (12128): Elaborating entity "carry_lookahead_subtractor" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 118
 Info (12128): Elaborating entity "full_adder_sub" for hierarchy "Alu:the_alu|carry_lookahead_subtractor:sub|full_adder_sub:gen_loop1[0].full_adder_sub_inst" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/carry_lookahead_subtractor.v Line: 26
-Info (12128): Elaborating entity "Shr_32" for hierarchy "Alu:the_alu|Shr_32:shr_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 115
-Info (12128): Elaborating entity "Shra_32" for hierarchy "Alu:the_alu|Shra_32:shra_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 116
-Info (12128): Elaborating entity "Shl_32" for hierarchy "Alu:the_alu|Shl_32:shl_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 117
-Info (12128): Elaborating entity "Ror_32" for hierarchy "Alu:the_alu|Ror_32:ror_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 118
-Info (12128): Elaborating entity "Rol_32" for hierarchy "Alu:the_alu|Rol_32:rol_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 119
-Info (12128): Elaborating entity "And_32" for hierarchy "Alu:the_alu|And_32:and_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 120
-Info (12128): Elaborating entity "Or_32" for hierarchy "Alu:the_alu|Or_32:or_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 121
-Info (12128): Elaborating entity "Neg_32" for hierarchy "Alu:the_alu|Neg_32:neg_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 122
-Info (12128): Elaborating entity "Not_32" for hierarchy "Alu:the_alu|Not_32:not_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 123
-Info (12128): Elaborating entity "division" for hierarchy "Alu:the_alu|division:Division" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 124
+Info (12128): Elaborating entity "Shr_32" for hierarchy "Alu:the_alu|Shr_32:shr_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 119
+Info (12128): Elaborating entity "Shra_32" for hierarchy "Alu:the_alu|Shra_32:shra_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 120
+Info (12128): Elaborating entity "Shl_32" for hierarchy "Alu:the_alu|Shl_32:shl_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 121
+Info (12128): Elaborating entity "Ror_32" for hierarchy "Alu:the_alu|Ror_32:ror_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 122
+Info (12128): Elaborating entity "Rol_32" for hierarchy "Alu:the_alu|Rol_32:rol_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 123
+Info (12128): Elaborating entity "And_32" for hierarchy "Alu:the_alu|And_32:and_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 124
+Info (12128): Elaborating entity "Or_32" for hierarchy "Alu:the_alu|Or_32:or_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 125
+Info (12128): Elaborating entity "Neg_32" for hierarchy "Alu:the_alu|Neg_32:neg_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 126
+Info (12128): Elaborating entity "Not_32" for hierarchy "Alu:the_alu|Not_32:not_32" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 127
+Info (12128): Elaborating entity "division" for hierarchy "Alu:the_alu|division:Division" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 128
 Warning (10230): Verilog HDL assignment warning at division.v(40): truncated value with size 33 to match size of target (32) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/division.v Line: 40
-Info (12128): Elaborating entity "Mul_64" for hierarchy "Alu:the_alu|Mul_64:mul_64" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 125
+Info (12128): Elaborating entity "Mul_64" for hierarchy "Alu:the_alu|Mul_64:mul_64" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 129
 Warning (10199): Verilog HDL Case Statement warning at mul_64.v(25): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 25
 Warning (10199): Verilog HDL Case Statement warning at mul_64.v(26): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 26
 Warning (10199): Verilog HDL Case Statement warning at mul_64.v(28): case item expression never matches the case expression File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/mul_64.v Line: 28
-Info (12128): Elaborating entity "PC" for hierarchy "Alu:the_alu|PC:pc" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 126
+Info (12128): Elaborating entity "PC" for hierarchy "Alu:the_alu|PC:pc" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 130
 Warning (10235): Verilog HDL Always Construct warning at PC.v(13): variable "inputPC" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 13
 Warning (10240): Verilog HDL Always Construct warning at PC.v(11): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 11
 Info (10041): Inferred latch for "temp[0]" at PC.v(12) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/PC.v Line: 12
@@ -1424,46 +1444,46 @@ Info (10041): Inferred latch for "decoder_in[3]" at select_encode.v(13) File: C:
 Info (12128): Elaborating entity "outport" for hierarchy "outport:outport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 130
 Info (12128): Elaborating entity "inport" for hierarchy "inport:inport" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 136
 Info (12128): Elaborating entity "ram" for hierarchy "ram:ram" File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/datapath.v Line: 144
-Warning (10240): Verilog HDL Always Construct warning at ram.v(26): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[0]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[1]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[2]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[3]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[4]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[5]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[6]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[7]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[8]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[9]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[10]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[11]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[12]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[13]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[14]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[15]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[16]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[17]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[18]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[19]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[20]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[21]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[22]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[23]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[24]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[25]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[26]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[27]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[28]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[29]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[30]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
-Info (10041): Inferred latch for "temp[31]" at ram.v(26) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 26
+Warning (10240): Verilog HDL Always Construct warning at ram.v(70): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[0]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[1]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[2]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[3]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[4]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[5]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[6]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[7]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[8]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[9]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[10]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[11]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[12]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[13]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[14]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[15]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[16]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[17]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[18]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[19]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[20]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[21]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[22]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[23]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[24]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[25]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[26]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[27]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[28]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[29]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[30]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
+Info (10041): Inferred latch for "temp[31]" at ram.v(70) File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/ram.v Line: 70
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/Phase1/ELEC374/output_files/Phase1.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4786 megabytes
-    Info: Processing ended: Thu Mar 21 21:02:02 2024
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Sun Mar 24 16:58:31 2024
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +--------------------------------------------+

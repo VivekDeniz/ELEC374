@@ -63,7 +63,7 @@ module ldi_tb();
 					 #15 PCout <= 0; MARin <= 0; IncPC <= 0; Zlowin <= 0;
             end
             T1: begin
-					//deassert
+					
 					
                 Zlowout <= 1; PCin <= 1; read <= 1; MDRin <= 1;
 
@@ -81,7 +81,7 @@ module ldi_tb();
 					 #15 Yin <= 0; BAout<= 0;Grb<=0;
             end
             T4: begin
-                 // Assuming logical AND is performed elsewhere
+                
                 Cout<=1; Zlowin <= 1;
 
 					 #15 Cout<=0; Zlowin <= 0;
@@ -91,8 +91,6 @@ module ldi_tb();
                Zlowout <= 1; Gra<=1;Rin<=1;
 					#15 Zlowout <= 0; Gra<=0;Rin<=0;Present_state<=0000;
             end
-				
-				
         endcase
     end
 endmodule

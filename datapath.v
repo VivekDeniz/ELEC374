@@ -1,6 +1,6 @@
 module datapath(
     // Inputs
-    input PCout, ZHighout, Zlowout, HIout, LOout, InPortout, Cout, CONin,
+    input PCout, ZHighout, Zlowout, HIout, LOout, InPortout,outportin, Cout, CONin,
     input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,
     input clk,
     input clr, HIin, LOin, ZHIin, ZLOin, Cin,
@@ -70,7 +70,7 @@ module datapath(
 	 
 	 mar marUnit(clr, clk, MARin, BusMuxOut, Mar_to_ram);
 	 
-	 CONFF conff(branch_flag, CONin, clr, BusMuxIn_IR[20:19], BusMuxOut);
+	 CONFF conff(branch_flag, CONin, clr, IRout_data[20:19], BusMuxOut);
 	 wire[5:0] encoderOut;
 	 
 	 encoder_32_5 regEncoder({8'b0000_0000,Cout,InPortout,MDRout,PCout,Zlowout,ZHighout,LOout,HIout,enableRout}, encoderOut);

@@ -42,8 +42,12 @@ module Alu(
 			else begin	
 				case (Opcode)
 					
-					Add,ld,ldi,st,jr,jal : begin
+					Add,ld,ldi,st,jr,Addi : begin
 						C_out[31:0] <= Add_out;
+						C_out[63:32]<= 32'b0;
+					end
+					jal: begin
+						C_out[31:0] <= Add_out+1;
 						C_out[63:32]<= 32'b0;
 					end
 					Sub : begin
@@ -70,11 +74,11 @@ module Alu(
 						C_out[31:0] <= Rol_out;
 						C_out[63:32]<= 32'b0;
 					end
-					And : begin
+					And,Andi : begin
 						C_out[31:0] <= And_out;
 						C_out[63:32]<= 32'b0;
 					end
-					Or  : begin
+					Or,Ori  : begin
 						C_out[31:0] <= Or_out;
 						C_out[63:32]<= 32'b0;
 					end
@@ -95,7 +99,7 @@ module Alu(
 					end
 					br :begin
 						if(branch_flag)begin
-							C_out[31:0] <= Add_out;
+							C_out[31:0] <= Add_out+1;
 							C_out[63:32]<= 32'b0;
 						end
 						else begin
