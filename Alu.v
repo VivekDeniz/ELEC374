@@ -4,8 +4,8 @@ module Alu(
 	input wire	[4:0]  Opcode,
 	input wire branch_flag,
 	input wire IncPC,
-	input wire [31:0] inputPC,
-	output reg [63:0] C_out
+	input wire 	[31:0] inputPC,
+	output reg 	[63:0] C_out
 	);
 	
 	parameter 	Add =5'b00011,
@@ -49,6 +49,7 @@ module Alu(
 					jal: begin
 						C_out[31:0] <= Add_out+1;
 						C_out[63:32]<= 32'b0;
+						
 					end
 					Sub : begin
 						C_out[31:0] <= Sub_out;

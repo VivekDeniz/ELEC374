@@ -1,9 +1,9 @@
 module datapath(
     // Inputs
     input PCout, ZHighout, Zlowout, HIout, LOout, InPortout,outportin, Cout, CONin,
-    input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,
+    input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,JAL,
     input clk,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin,
+    input clr, HIin, LOin, ZHIin, ZLOin, Cin,R15in,
 	 input [31:0] inport_data,
 	 output[31:0] outport_data
 	 
@@ -52,7 +52,7 @@ module datapath(
     Register r12(clr, clk, enableReg[12], BusMuxOut, BusMuxIn_R12);
     Register r13(clr, clk, enableReg[13], BusMuxOut, BusMuxIn_R13);
     Register r14(clr, clk, enableReg[14], BusMuxOut, BusMuxIn_R14);
-    Register r15(clr, clk, enableReg[15], BusMuxOut, BusMuxIn_R15);
+    Register r15(clr, clk, enableReg[15]|JAL, BusMuxOut, BusMuxIn_R15);
 
     // Instantiate other registers
     PC_reg PC(clr, clk, PCin, BusMuxOut, BusMuxIn_PC);
