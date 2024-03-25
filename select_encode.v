@@ -41,6 +41,7 @@ module select_encode(
 		if(IR[18]==1)extend_temp={14'b1111_1111_1111_11,IR[17:0]};
 		else extend_temp={14'b0,IR[17:0]};
 		
+		
 	end
 	
 	

@@ -28,7 +28,7 @@ module ram(	input  [31:0]data_in,
 //addi test
 //		memory[90] =32'b00001_0100_0000_0000_000000000000111;//load using C only into R4
 //		memory[91] =32'b00010_0011_0100_1111_111111111111011; //add R4 and -5 into r3
-//		
+		
 
 //andi test
 //		memory[90] =32'b00001_0100_0000_0000_000000000000111;//load using C only into R4
@@ -51,10 +51,10 @@ module ram(	input  [31:0]data_in,
 //		memory[91] =32'b10100_0110_0000_0000_000000000000000; // jr R6
 //jal test
 //		memory[90] =32'b00001_0110_0000_0000_000000000000111;//load using C only into R6
-//		memory[91] =32'b10101_0110_1111_0000_000000000000000; // jal R6, double check on how they want this
+//		memory[91] =32'b10101_0110_0000_0000_000000000000000; // jal R6, double check on how they want this
 //mfhi test
-//		memory[90] =32'b00001_0000_0000_0000_000000000000111;//modded loadi using C only into HI
-//		memory[91] =32'b11000_0110_0000_0000_000000000000000; // mfhi R6
+		memory[90] =32'b00001_0000_0000_0000_000000000000111;//modded loadi using C only into HI
+		memory[91] =32'b11000_0110_0000_0000_000000000000000; // mfhi R6
 //mflo test
 //		memory[90] =32'b00001_0000_0000_0000_000000000000111;// modded loadi using C only into LO
 //		memory[91] =32'b11001_0111_0000_0000_000000000000000; // mflo R7
@@ -63,7 +63,7 @@ module ram(	input  [31:0]data_in,
 //		memory[91] =32'b10111_0011_0000_0000_000000000000000; // outputting R3
 //in test
 		
-		memory[90] =32'b10110_0100_0000_0000_000000000000000; // tajing input into R4
+//		memory[90] =32'b10110_0100_0000_0000_000000000000000; // taking input into R4
 	end
 	reg [31:0] temp;
 	always @(*) begin

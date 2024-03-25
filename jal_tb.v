@@ -2,7 +2,7 @@
 
 module jal_tb();
     reg PCout, ZHighout, Zlowout, Hiout, Loout, InPortout, Cout,CONin, MDRout;
-    reg MARin, PCin, MDRin, IRin, Yin, read, write,IncPC, Gra,Grb,Grc, Rin,Rout,BAout;
+    reg MARin, PCin, MDRin, IRin, Yin, read, write,IncPC, Gra,Grb,Grc, Rin,Rout,BAout,JAL;
     
     reg  HIin, LOin, ZHighin, Cin, Zlowin, Clock, Clear;
     reg [31:0] Mdatain,inport_data;
@@ -17,7 +17,7 @@ module jal_tb();
         .PCout(PCout), .ZHighout(ZHighout), .Zlowout(Zlowout), .HIout(Hiout), .LOout(Loout), .InPortout(InPortout), .Cout(Cout),.CONin(CONin), .MDRout(MDRout), 
         .MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin),
         .IncPC(IncPC), .Read(read), .Write(write),  
-        .clk(Clock), .clr(Clear), .HIin(HIin), .LOin(LOin), .ZHIin(ZHighin), .ZLOin(Zlowin), .Cin(Cin),
+        .clk(Clock), .clr(Clear), .HIin(HIin), .LOin(LOin), .ZHIin(ZHighin), .ZLOin(Zlowin), .Cin(Cin),.JAL(JAL),
 		  .Gra(Gra),.Grb(Grb),.Grc(Grc), .Rin(Rin),.Rout(Rout),.BAout(BAout),.inport_data(inport_data), .outport_data(outport_data)
     );
 
@@ -39,7 +39,7 @@ module jal_tb();
 			Rin=0;
          inport_data=32'b0;
 			CONin=0;
-			
+			JAL=0;
     end
 	always #10 Clock = ~Clock;
     
@@ -116,8 +116,8 @@ module jal_tb();
 					#15 PCout <= 0;Zlowin<=0;
 				end
 				T4: begin
-					Zlowout<=1;Grb<=1;Rin<=1;
-					#15 Zlowout<=0;Grb<=0;Rin<=0;
+					Zlowout<=1;JAL<=1;
+					#15 Zlowout<=0;JAL<=0;
 				end
             T5: begin
 					
