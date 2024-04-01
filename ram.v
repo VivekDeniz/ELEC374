@@ -6,14 +6,15 @@ module ram(	input  [31:0]data_in,
 	reg[31:0] memory [0:511];
 	initial begin
 //ld test	
-//		memory[90] =32'b00000_0010_0000_0000_000000010010101;//load using C only
-//		memory[91] =32'b00000_0000_0010_0000_000000000111000;//load using Rb and c
+//		memory[0] =32'b00000_0010_0000_0000_000000010010101;//load using C only
+//		memory[1] =32'b00000_0000_0010_0000_000000000111000;//load using Rb and c
 //		memory[149] =32'b10;//2
 //		memory[58] =32'b101;//5
 		
 //ldi test	
-//		memory[90] =32'b00001_0010_0000_0000_000000010010101;//load using C only
-//		memory[91] =32'b00001_0000_0010_0000_000000000111000;//load using Rb and c
+//		memory[0] =32'b00001_0010_0000_0000_000000000010010;//load using C only
+//		memory[1] =32'b00001_0001_0000_0000_000000000111111;//load using Rb and c
+//		memory[2] =32'b10000_0010_0001_0000_000000000000000;//load using Rb and c
  
 		
 //st test
@@ -53,8 +54,8 @@ module ram(	input  [31:0]data_in,
 //		memory[90] =32'b00001_0110_0000_0000_000000000000111;//load using C only into R6
 //		memory[91] =32'b10101_0110_0000_0000_000000000000000; // jal R6, double check on how they want this
 //mfhi test
-		memory[90] =32'b00001_0000_0000_0000_000000000000111;//modded loadi using C only into HI
-		memory[91] =32'b11000_0110_0000_0000_000000000000000; // mfhi R6
+//		memory[90] =32'b00001_0000_0000_0000_000000000000111;//modded loadi using C only into HI
+//		memory[91] =32'b11000_0110_0000_0000_000000000000000; // mfhi R6
 //mflo test
 //		memory[90] =32'b00001_0000_0000_0000_000000000000111;// modded loadi using C only into LO
 //		memory[91] =32'b11001_0111_0000_0000_000000000000000; // mflo R7
@@ -64,6 +65,9 @@ module ram(	input  [31:0]data_in,
 //in test
 		
 //		memory[90] =32'b10110_0100_0000_0000_000000000000000; // taking input into R4
+	$readmemh("memory_lab.hex", memory);
+
+
 	end
 	reg [31:0] temp;
 	always @(*) begin

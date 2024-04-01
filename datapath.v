@@ -1,27 +1,23 @@
 module datapath(
     // Inputs
-    input PCout, ZHighout, Zlowout, HIout, LOout, InPortout,outportin, Cout, CONin,
-    input MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,JAL,
-    input clk,
-    input clr, HIin, LOin, ZHIin, ZLOin, Cin,R15in,
+    input clk,reset,stop,
 	 input [31:0] inport_data,
-	 output[31:0] outport_data
-	 
-	 
+	 output[31:0] outport_data,
+	 output wire run
 );
     // Define internal signals and registers
     
 	 
 		
 	
-	
-    // Initialize enableReg and Rout
-    
+
 
 	
-
+	 wire PCout, ZHighout, Zlowout, HIout, LOout, InPortout,outportin, Cout, CONin;
+	 wire MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read,Write, Gra,Grb,Grc, Rin,Rout,BAout,JAL;
+	 wire clr, HIin, LOin, ZHIin, ZLOin, Cin;
     // Define wires for register outputs
-    wire [31:0] BusMuxIn_IR, BusMuxIn_Y, C_sign_extend, BusMuxIn_InPort, BusMuxIn_MDR, BusMuxIn_PC, BusMuxIn_ZLO, BusMuxIn_ZHI, BusMuxIn_LO, BusMuxIn_HI;
+    wire [31:0] BusMuxIn_Y, C_sign_extend, BusMuxIn_InPort, BusMuxIn_MDR, BusMuxIn_PC, BusMuxIn_ZLO, BusMuxIn_ZHI, BusMuxIn_LO, BusMuxIn_HI;
     wire [31:0] BusMuxIn_R15, BusMuxIn_R14, BusMuxIn_R13, BusMuxIn_R12, BusMuxIn_R11, BusMuxIn_R10, BusMuxIn_R9, BusMuxIn_R8, BusMuxIn_R7, BusMuxIn_R6, BusMuxIn_R5, BusMuxIn_R4, BusMuxIn_R3, BusMuxIn_R2, BusMuxIn_R1, BusMuxIn_R0;
     //wire [31:0] bus_signal;
 	 wire [63:0] C_data_out, BusMuxIn_MAR;
@@ -142,6 +138,16 @@ module datapath(
 		.write(Write),
 		.data_in(BusMuxOut)
 		);
-	
-
+	control_unit control_unit(
+		.IR(IRout_data),.clk(clk),.reset(reset),
+		.stop(stop),.CONin(CONin),
+		.PCout(PCout), .ZHighout(ZHighout),
+		.Zlowout(Zlowout), .Hiout(HIout), .Loout(LOout), 
+		.InPortout(InPortout),.outportin(outportin), .Cout(Cout), 
+		.MDRout(MDRout), .MARin(MARin), .PCin(PCin), .MDRin(MDRin),
+		.IRin(IRin), .Yin(Yin), .IncPC(IncPC), .read(Read),.write(Write),
+		.Gra(Gra),.Grb(Grb),.Grc(Grc),.Rin(Rin),.Rout(Rout),.BAout(BAout),
+		.JAL(JAL),.clr(clr),.HIin(HIin), .LOin(LOin), .ZHighin(ZHIin), 
+		.Zlowin(ZLOin), .Cin(Cin),.Run(run)
+		);
 endmodule

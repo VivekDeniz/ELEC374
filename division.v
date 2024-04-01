@@ -1,42 +1,61 @@
-module division(input [31:0] dividend, divisor, output reg [31:0] quotient, remainder);
-    reg [31:0] m, q;       // Registers to store the current values of divisor and quotient
-    reg [32:0] a;          // Register to store the intermediate result during division
-    integer i;             // Integer variable for loop iteration
+module division (
+    input wire [31:0] dividend,
+    input wire [31:0] divisor,
+    output reg [63:0] result
+);
 
-    always @ (*)
-    begin
-        // Initialize variables with input values
-        q = dividend;
-        m = divisor;
+// Initalize registers
+reg [32:0] a;
+reg [31:0] q;
+integer i;
+reg [31:0] abs_q;
+reg [31:0] abs_m;
+
+always @(*) begin
+
+    if (divisor == 0) begin
+        result = {2*32{1'b1}};
+
+    end else if (dividend == 0) begin
+        result = 0;
+
+    end else begin
+
+
+        q = 0;
         a = 0;
 
-        // Perform the division
-        for(i = 0; i < 32; i = i+1)
-        begin
-            // Shift left the current a and append the most significant bit of q
-            a = {a[30:0], q[31]};
-            // Shift right the current q
-            q[31:1] = q[30:0];
-            // Subtract m from a
-            a = a - m;
+        // If signed bit it 1 then get absolute value of dividend and divisor 
+        abs_q = dividend[31] ? -dividend : dividend;
+        abs_m = divisor[31] ? -divisor : divisor;
 
-            // Check if the result is positive (MSB of a is 0)
-            if(a[31] == 0)
-            begin
-                // If non-negative, set the LSB of q to 1
-                q[0] = 1;
-            end
-            else
-            begin
-					 // If negative, set the LSB of q to 0 and add m back to a
-                q[0] = 0;
-                a = a + m;
+
+        for (i = 31; i >= 0; i = i -1) begin
+
+            a = a << 1;
+            a[0] = abs_q[i];
+
+            a = a - abs_m;
+
+            if (a[32]) begin
+
+                q[i] = 0;
+                a = a + abs_m;
+
+            end else begin
+
+                q[i] = 1;
+
             end
         end
 
-        // Assign the final quotient to the output
-        quotient = q;
-		  
-		  remainder = a;
+
+        if (dividend[31] != divisor[31]) begin
+            q = -q;
+        end
+
+ 
+        result = {a[32-1:0], q};
     end
+end
 endmodule

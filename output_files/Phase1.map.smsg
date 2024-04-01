@@ -15,3 +15,5 @@ Info (10281): Verilog HDL Declaration information at Alu.v(11): object "Add" dif
 Info (10281): Verilog HDL Declaration information at Alu.v(12): object "Sub" differs only in case from object "sub" in the same scope File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Alu.v Line: 12
 Warning (10268): Verilog HDL information at Select_encode_tb.v(50): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/Select_encode_tb.v Line: 50
 Warning (10268): Verilog HDL information at st_tb.v(52): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/st_tb.v Line: 52
+Warning (10268): Verilog HDL information at control_unit.v(72): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/control_unit.v Line: 72
+Info (10281): Verilog HDL Declaration information at control_unit.v(7): object "JAL" differs only in case from object "jal" in the same scope File: C:/intelFPGA_lite/18.1/Phase1/ELEC374/control_unit.v Line: 7
