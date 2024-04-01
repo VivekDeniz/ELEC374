@@ -1,4 +1,4 @@
-module PC_reg #(parameter VAL = 0)(
+module PC_reg #(parameter VAL = 90)(
     input clr, clk, enable, 
     input [31:0] D, 
     output wire [31:0] Q

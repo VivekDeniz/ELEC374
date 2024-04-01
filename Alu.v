@@ -16,7 +16,7 @@ module Alu(
 					Ror =5'b01000,
 					Rol =5'b01001,
 					And =5'b01010,
-					Or  =5'b01100,
+					Or  =5'b01011,
 					Addi=5'b01100,
 					Andi=5'b01101,
 					Ori =5'b01110,
@@ -31,8 +31,8 @@ module Alu(
 					jr  =5'b10100,
 					jal =5'b10101;
 					
-	wire	[31:0] Add_out,Sub_out,Shr_out,Shra_out,Shl_out,Ror_out,Rol_out,And_out,Or_out,Neg_out,Not_out, Div_out_r, Div_out_q,newPC;
-	wire	[63:0] Mul_out;
+	wire	[31:0] Add_out,Sub_out,Shr_out,Shra_out,Shl_out,Ror_out,Rol_out,And_out,Or_out,Neg_out,Not_out,newPC;
+	wire	[63:0] Mul_out, Div_out;
 	wire add_overflow;
 	always @(*)
 		begin
@@ -92,15 +92,15 @@ module Alu(
 						C_out[63:32]<= 32'b0;
 					end
 					Div : begin
-						C_out[31:0] <= Div_out_q;
-						C_out[63:32]<= Div_out_r;
+						C_out <= Div_out;
+						
 					end
 					Mul : begin
 						C_out <= Mul_out;
 					end
 					br :begin
 						if(branch_flag)begin
-							C_out[31:0] <= Add_out+1;
+							C_out[31:0] <= Add_out;
 							C_out[63:32]<= 32'b0;
 						end
 						else begin
@@ -124,9 +124,9 @@ module Alu(
 		Rol_32 rol_32(Ry,Rb, Rol_out);
 		And_32 and_32(Ry, Rb, And_out);
 		Or_32 or_32(Ry, Rb, Or_out);
-		Neg_32 neg_32(Ry,Neg_out);
-		Not_32 not_32(Ry, Not_out);
-		division Division(Ry, Rb, Div_out_q,Div_out_r);
+		Neg_32 neg_32(Rb,Neg_out);
+		Not_32 not_32(Rb, Not_out);
+		division Division(Ry, Rb, Div_out);
 		Mul_64 mul_64(Ry, Rb, Mul_out);
 		PC pc(IncPC,inputPC,newPC);
 		

@@ -1,6 +1,6 @@
 `timescale 1ns / 10ps
 
-module PC #(parameter qInitial = 90)(
+module PC #(parameter qInitial = 0)(
     input IncPC,
     input [31:0] inputPC,
     output wire[31:0] newPC
